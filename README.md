@@ -1,3 +1,2 @@
-# Ben-Woodruff
-# Autonomous-Color-Object-Retrieval-Robot
-# Autonomous-Color-Object-Retrieval-Robot
+# RDSP Team 3 GitHub
+See each folder for information for that module.
