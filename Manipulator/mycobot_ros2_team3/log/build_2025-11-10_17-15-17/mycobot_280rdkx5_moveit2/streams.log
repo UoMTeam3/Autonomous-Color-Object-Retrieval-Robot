@@ -1,0 +1,61 @@
+[2.042s] Invoking command in '/home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/laptop5/mycobot_ros2/mycobot_280/mycobot_280rdkx5_moveit2 -DCMAKE_INSTALL_PREFIX=/home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2
+[2.563s] -- The C compiler identification is GNU 13.3.0
+[3.052s] -- The CXX compiler identification is GNU 13.3.0
+[3.197s] -- Detecting C compiler ABI info
+[4.266s] -- Detecting C compiler ABI info - done
+[4.318s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.319s] -- Detecting C compile features
+[4.320s] -- Detecting C compile features - done
+[4.374s] -- Detecting CXX compiler ABI info
+[4.917s] -- Detecting CXX compiler ABI info - done
+[5.043s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.043s] -- Detecting CXX compile features
+[5.061s] -- Detecting CXX compile features - done
+[5.140s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[6.085s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[7.887s] -- Configuring done (5.8s)
+[7.903s] -- Generating done (0.0s)
+[7.921s] -- Build files have been written to: /home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2
+[13.826s] Invoked command in '/home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/laptop5/mycobot_ros2/mycobot_280/mycobot_280rdkx5_moveit2 -DCMAKE_INSTALL_PREFIX=/home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2
+[13.826s] Invoking command in '/home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2 -- -j12 -l12
+[18.316s] Invoked command in '/home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2 -- -j12 -l12
+[18.333s] Invoking command in '/home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2
+[18.373s] -- Install configuration: ""
+[18.373s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/ament_index/resource_index/package_run_dependencies/mycobot_280rdkx5_moveit2
+[18.374s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/ament_index/resource_index/parent_prefix_path/mycobot_280rdkx5_moveit2
+[18.374s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/environment/ament_prefix_path.sh
+[18.374s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/environment/ament_prefix_path.dsv
+[18.374s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/environment/path.sh
+[18.374s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/environment/path.dsv
+[18.375s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/local_setup.bash
+[18.375s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/local_setup.sh
+[18.375s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/local_setup.zsh
+[18.375s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/local_setup.dsv
+[18.375s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/package.dsv
+[18.376s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/ament_index/resource_index/packages/mycobot_280rdkx5_moveit2
+[18.379s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/cmake/mycobot_280rdkx5_moveit2Config.cmake
+[18.389s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/cmake/mycobot_280rdkx5_moveit2Config-version.cmake
+[18.396s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/package.xml
+[18.397s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch
+[18.397s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/demo.launch.py
+[18.397s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/moveit_rviz.launch.py
+[18.397s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/move_group.launch.py
+[18.397s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/warehouse_db.launch.py
+[18.398s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/rsp.launch.py
+[18.398s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/setup_assistant.launch.py
+[18.398s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/static_virtual_joint_tfs.launch.py
+[18.398s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/launch/spawn_controllers.launch.py
+[18.398s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config
+[18.399s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/pilz_cartesian_limits.yaml
+[18.399s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/ros2_controllers.yaml
+[18.402s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/kinematics.yaml
+[18.402s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/sensors_3d.yaml
+[18.403s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/moveit.rviz
+[18.403s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/moveit_controllers.yaml
+[18.403s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/initial_positions.yaml
+[18.403s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/joint_limits.yaml
+[18.403s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/firefighter.srdf
+[18.404s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/firefighter.urdf.xacro
+[18.404s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/config/firefighter.ros2_control.xacro
+[18.404s] -- Installing: /home/laptop5/mycobot_ros2/install/mycobot_280rdkx5_moveit2/share/mycobot_280rdkx5_moveit2/.setup_assistant
+[18.448s] Invoked command in '/home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/laptop5/mycobot_ros2/build/mycobot_280rdkx5_moveit2

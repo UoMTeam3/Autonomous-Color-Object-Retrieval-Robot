@@ -1,0 +1,82 @@
+[17.221s] Invoking command in '/home/laptop5/mycobot_ros2/mycobot_320/mycobot_320pi': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_320pi/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mycobot_320pi build --build-base /home/laptop5/mycobot_ros2/build/mycobot_320pi/build install --record /home/laptop5/mycobot_ros2/build/mycobot_320pi/install.log --single-version-externally-managed install_data
+[19.034s] running egg_info
+[19.039s] creating ../../build/mycobot_320pi/mycobot_320pi.egg-info
+[19.213s] writing ../../build/mycobot_320pi/mycobot_320pi.egg-info/PKG-INFO
+[19.221s] writing dependency_links to ../../build/mycobot_320pi/mycobot_320pi.egg-info/dependency_links.txt
+[19.222s] writing entry points to ../../build/mycobot_320pi/mycobot_320pi.egg-info/entry_points.txt
+[19.222s] writing requirements to ../../build/mycobot_320pi/mycobot_320pi.egg-info/requires.txt
+[19.225s] writing top-level names to ../../build/mycobot_320pi/mycobot_320pi.egg-info/top_level.txt
+[19.225s] writing manifest file '../../build/mycobot_320pi/mycobot_320pi.egg-info/SOURCES.txt'
+[19.376s] reading manifest file '../../build/mycobot_320pi/mycobot_320pi.egg-info/SOURCES.txt'
+[19.376s] adding license file 'LICENSE'
+[19.379s] writing manifest file '../../build/mycobot_320pi/mycobot_320pi.egg-info/SOURCES.txt'
+[19.385s] running build
+[19.386s] running build_py
+[19.386s] creating /home/laptop5/mycobot_ros2/build/mycobot_320pi/build
+[19.386s] creating /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib
+[19.386s] creating /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.387s] copying mycobot_320pi/__init__.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.388s] copying mycobot_320pi/listen_real_of_topic.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.388s] copying mycobot_320pi/listen_real_service.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.388s] copying mycobot_320pi/teleop_keyboard.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.395s] copying mycobot_320pi/follow_display.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.396s] copying mycobot_320pi/simple_gui.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.396s] copying mycobot_320pi/slider_control_force_gripper.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.396s] copying mycobot_320pi/listen_real.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.397s] copying mycobot_320pi/slider_control_adaptive_gripper.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.397s] copying mycobot_320pi/slider_control.py -> /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi
+[19.397s] running install
+[19.433s] running install_lib
+[19.521s] creating /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.522s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/__init__.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.523s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/listen_real_of_topic.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.523s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/listen_real_service.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.526s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/teleop_keyboard.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.528s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/follow_display.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.530s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/simple_gui.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.533s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/slider_control_force_gripper.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.535s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/listen_real.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.538s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/slider_control_adaptive_gripper.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.541s] copying /home/laptop5/mycobot_ros2/build/mycobot_320pi/build/lib/mycobot_320pi/slider_control.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi
+[19.544s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/__init__.py to __init__.cpython-312.pyc
+[19.549s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/listen_real_of_topic.py to listen_real_of_topic.cpython-312.pyc
+[19.552s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/listen_real_service.py to listen_real_service.cpython-312.pyc
+[19.562s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/teleop_keyboard.py to teleop_keyboard.cpython-312.pyc
+[19.574s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/follow_display.py to follow_display.cpython-312.pyc
+[19.579s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/simple_gui.py to simple_gui.cpython-312.pyc
+[19.603s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/slider_control_force_gripper.py to slider_control_force_gripper.cpython-312.pyc
+[19.608s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/listen_real.py to listen_real.cpython-312.pyc
+[19.620s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/slider_control_adaptive_gripper.py to slider_control_adaptive_gripper.cpython-312.pyc
+[19.621s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi/slider_control.py to slider_control.cpython-312.pyc
+[19.626s] running install_data
+[19.627s] creating /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/ament_index
+[19.627s] creating /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/ament_index/resource_index
+[19.627s] creating /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/ament_index/resource_index/packages
+[19.627s] copying resource/mycobot_320pi -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/ament_index/resource_index/packages
+[19.627s] copying package.xml -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi
+[19.628s] creating /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.628s] copying launch/slider_control_force_gripper.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.628s] copying launch/slider_control.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.629s] copying launch/mycobot_follow.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.630s] copying launch/slider_control_adaptive_gripper.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.630s] copying launch/simple_gui.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.630s] copying launch/test.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.634s] copying launch/test_force_gripper.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.634s] copying launch/teleop_keyboard.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.634s] copying launch/test_adaptive_gripper.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/launch
+[19.635s] creating /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/config
+[19.635s] copying config/mycobot_320_pi.rviz -> /home/laptop5/mycobot_ros2/install/mycobot_320pi/share/mycobot_320pi/config
+[19.635s] running install_egg_info
+[19.687s] Copying ../../build/mycobot_320pi/mycobot_320pi.egg-info to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages/mycobot_320pi-0.0.0-py3.12.egg-info
+[19.699s] running install_scripts
+[20.598s] Installing camera_display script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.598s] Installing follow_display script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.600s] Installing listen_real script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.600s] Installing listen_real_of_topic script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.606s] Installing listen_real_service script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.606s] Installing simple_gui script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.607s] Installing slider_control script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.613s] Installing slider_control_adaptive_gripper script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.613s] Installing teleop_keyboard script to /home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/mycobot_320pi
+[20.618s] writing list of installed files to '/home/laptop5/mycobot_ros2/build/mycobot_320pi/install.log'
+[20.973s] Invoked command in '/home/laptop5/mycobot_ros2/mycobot_320/mycobot_320pi' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_320pi/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_320pi/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mycobot_320pi build --build-base /home/laptop5/mycobot_ros2/build/mycobot_320pi/build install --record /home/laptop5/mycobot_ros2/build/mycobot_320pi/install.log --single-version-externally-managed install_data

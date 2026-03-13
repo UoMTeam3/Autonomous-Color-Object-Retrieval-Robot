@@ -1,0 +1,40 @@
+[1.175s] Invoking command in '/home/laptop5/mycobot_ros2/mycobot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mycobot_description build --build-base /home/laptop5/mycobot_ros2/build/mycobot_description/build install --record /home/laptop5/mycobot_ros2/build/mycobot_description/install.log --single-version-externally-managed install_data
+[1.469s] Traceback (most recent call last):
+[1.469s]   File "/home/laptop5/mycobot_ros2/mycobot_description/setup.py", line 29, in <module>
+[1.469s]     setup(
+[1.469s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 107, in setup
+[1.471s]     return distutils.core.setup(**attrs)
+[1.472s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.472s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 172, in setup
+[1.473s]     ok = dist.parse_command_line()
+[1.473s]          ^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.473s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 475, in parse_command_line
+[1.474s]     args = self._parse_command_opts(parser, args)
+[1.475s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.475s]   File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1133, in _parse_command_opts
+[1.475s]     nargs = _Distribution._parse_command_opts(self, parser, args)
+[1.475s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.475s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 534, in _parse_command_opts
+[1.476s]     cmd_class = self.get_command_class(command)
+[1.476s]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.476s]   File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 978, in get_command_class
+[1.476s]     eps = metadata.entry_points(group='distutils.commands', name=command)
+[1.476s]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.476s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 913, in entry_points
+[1.477s]     return EntryPoints(eps).select(**params)
+[1.477s]            ^^^^^^^^^^^^^^^^
+[1.477s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 911, in <genexpr>
+[1.477s]     dist.entry_points for dist in _unique(distributions())
+[1.477s]     ^^^^^^^^^^^^^^^^^
+[1.478s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 471, in entry_points
+[1.478s]     return EntryPoints._from_text_for(self.read_text('entry_points.txt'), self)
+[1.478s]                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.478s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 819, in read_text
+[1.478s]     return self._path.joinpath(filename).read_text(encoding='utf-8')
+[1.479s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.479s]   File "/usr/lib/python3.12/pathlib.py", line 1030, in read_text
+[1.480s]     return f.read()
+[1.480s]            ^^^^^^^^
+[1.480s]   File "<frozen codecs>", line 319, in decode
+[1.481s] KeyboardInterrupt
+[1.502s] Invoked command in '/home/laptop5/mycobot_ros2/mycobot_description' returned '-2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mycobot_description build --build-base /home/laptop5/mycobot_ros2/build/mycobot_description/build install --record /home/laptop5/mycobot_ros2/build/mycobot_description/install.log --single-version-externally-managed install_data

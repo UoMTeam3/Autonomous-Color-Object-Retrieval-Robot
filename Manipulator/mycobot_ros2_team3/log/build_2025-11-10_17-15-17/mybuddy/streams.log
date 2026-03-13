@@ -1,0 +1,55 @@
+[5.093s] Invoking command in '/home/laptop5/mycobot_ros2/Mybuddy/mybuddy': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mybuddy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mybuddy build --build-base /home/laptop5/mycobot_ros2/build/mybuddy/build install --record /home/laptop5/mycobot_ros2/build/mybuddy/install.log --single-version-externally-managed install_data
+[7.522s] running egg_info
+[7.523s] creating ../../build/mybuddy/mybuddy.egg-info
+[7.645s] writing ../../build/mybuddy/mybuddy.egg-info/PKG-INFO
+[7.645s] writing dependency_links to ../../build/mybuddy/mybuddy.egg-info/dependency_links.txt
+[7.647s] writing entry points to ../../build/mybuddy/mybuddy.egg-info/entry_points.txt
+[7.653s] writing requirements to ../../build/mybuddy/mybuddy.egg-info/requires.txt
+[7.653s] writing top-level names to ../../build/mybuddy/mybuddy.egg-info/top_level.txt
+[7.653s] writing manifest file '../../build/mybuddy/mybuddy.egg-info/SOURCES.txt'
+[8.036s] reading manifest file '../../build/mybuddy/mybuddy.egg-info/SOURCES.txt'
+[8.036s] writing manifest file '../../build/mybuddy/mybuddy.egg-info/SOURCES.txt'
+[8.039s] running build
+[8.039s] running build_py
+[8.039s] creating /home/laptop5/mycobot_ros2/build/mybuddy/build
+[8.040s] creating /home/laptop5/mycobot_ros2/build/mybuddy/build/lib
+[8.041s] creating /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy
+[8.041s] copying mybuddy/__init__.py -> /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy
+[8.041s] copying mybuddy/listen_real_of_topic.py -> /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy
+[8.042s] copying mybuddy/follow_display.py -> /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy
+[8.042s] copying mybuddy/listen_real.py -> /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy
+[8.042s] copying mybuddy/slider_control.py -> /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy
+[8.042s] running install
+[8.059s] running install_lib
+[8.240s] creating /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy
+[8.240s] copying /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy/__init__.py -> /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy
+[8.240s] copying /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy/listen_real_of_topic.py -> /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy
+[8.241s] copying /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy/follow_display.py -> /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy
+[8.241s] copying /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy/listen_real.py -> /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy
+[8.241s] copying /home/laptop5/mycobot_ros2/build/mybuddy/build/lib/mybuddy/slider_control.py -> /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy
+[8.243s] byte-compiling /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy/__init__.py to __init__.cpython-312.pyc
+[8.243s] byte-compiling /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy/listen_real_of_topic.py to listen_real_of_topic.cpython-312.pyc
+[8.253s] byte-compiling /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy/follow_display.py to follow_display.cpython-312.pyc
+[8.262s] byte-compiling /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy/listen_real.py to listen_real.cpython-312.pyc
+[8.270s] byte-compiling /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy/slider_control.py to slider_control.cpython-312.pyc
+[8.272s] running install_data
+[8.274s] creating /home/laptop5/mycobot_ros2/install/mybuddy/share/ament_index
+[8.274s] creating /home/laptop5/mycobot_ros2/install/mybuddy/share/ament_index/resource_index
+[8.274s] creating /home/laptop5/mycobot_ros2/install/mybuddy/share/ament_index/resource_index/packages
+[8.275s] copying resource/mybuddy -> /home/laptop5/mycobot_ros2/install/mybuddy/share/ament_index/resource_index/packages
+[8.279s] copying package.xml -> /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy
+[8.282s] creating /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy/launch
+[8.283s] copying launch/slider_control.launch.py -> /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy/launch
+[8.285s] copying launch/mybuddy_follow.launch.py -> /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy/launch
+[8.285s] copying launch/test.launch.py -> /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy/launch
+[8.285s] creating /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy/config
+[8.285s] copying config/dual_arm.rviz -> /home/laptop5/mycobot_ros2/install/mybuddy/share/mybuddy/config
+[8.286s] running install_egg_info
+[8.458s] Copying ../../build/mybuddy/mybuddy.egg-info to /home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages/mybuddy-0.0.0-py3.12.egg-info
+[8.463s] running install_scripts
+[9.014s] Installing follow_display script to /home/laptop5/mycobot_ros2/install/mybuddy/lib/mybuddy
+[9.015s] Installing listen_real script to /home/laptop5/mycobot_ros2/install/mybuddy/lib/mybuddy
+[9.020s] Installing listen_real_of_topic script to /home/laptop5/mycobot_ros2/install/mybuddy/lib/mybuddy
+[9.020s] Installing slider_control script to /home/laptop5/mycobot_ros2/install/mybuddy/lib/mybuddy
+[9.020s] writing list of installed files to '/home/laptop5/mycobot_ros2/build/mybuddy/install.log'
+[13.504s] Invoked command in '/home/laptop5/mycobot_ros2/Mybuddy/mybuddy' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mybuddy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mybuddy/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mybuddy build --build-base /home/laptop5/mycobot_ros2/build/mybuddy/build install --record /home/laptop5/mycobot_ros2/build/mybuddy/install.log --single-version-externally-managed install_data

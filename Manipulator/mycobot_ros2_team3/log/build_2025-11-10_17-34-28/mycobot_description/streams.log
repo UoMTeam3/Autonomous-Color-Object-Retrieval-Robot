@@ -1,0 +1,20 @@
+[1.097s] Invoking command in '/home/laptop5/mycobot_ros2/mycobot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(elephant) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mycobot_description build --build-base /home/laptop5/mycobot_ros2/build/mycobot_description/build install --record /home/laptop5/mycobot_ros2/build/mycobot_description/install.log --single-version-externally-managed install_data
+[1.442s] running egg_info
+[1.466s] writing ../build/mycobot_description/mycobot_description.egg-info/PKG-INFO
+[1.466s] writing dependency_links to ../build/mycobot_description/mycobot_description.egg-info/dependency_links.txt
+[1.466s] writing requirements to ../build/mycobot_description/mycobot_description.egg-info/requires.txt
+[1.467s] writing top-level names to ../build/mycobot_description/mycobot_description.egg-info/top_level.txt
+[1.516s] reading manifest file '../build/mycobot_description/mycobot_description.egg-info/SOURCES.txt'
+[1.517s] adding license file 'LICENSE'
+[1.520s] writing manifest file '../build/mycobot_description/mycobot_description.egg-info/SOURCES.txt'
+[1.521s] running build
+[1.521s] running build_py
+[1.521s] running install
+[1.529s] running install_lib
+[1.553s] running install_data
+[1.558s] running install_egg_info
+[1.583s] removing '/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages/mycobot_description-0.0.0-py3.12.egg-info' (and everything under it)
+[1.584s] Copying ../build/mycobot_description/mycobot_description.egg-info to /home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages/mycobot_description-0.0.0-py3.12.egg-info
+[1.584s] running install_scripts
+[1.741s] writing list of installed files to '/home/laptop5/mycobot_ros2/build/mycobot_description/install.log'
+[1.777s] Invoked command in '/home/laptop5/mycobot_ros2/mycobot_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(elephant) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mycobot_description build --build-base /home/laptop5/mycobot_ros2/build/mycobot_description/build install --record /home/laptop5/mycobot_ros2/build/mycobot_description/install.log --single-version-externally-managed install_data
