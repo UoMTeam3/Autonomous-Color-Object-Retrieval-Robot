@@ -1,0 +1,31 @@
+[2.181s] Invoking command in '/home/laptop5/mycobot_ros2/mycobot_280/mycobot_280pi': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_280pi/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mycobot_280pi build --build-base /home/laptop5/mycobot_ros2/build/mycobot_280pi/build install --record /home/laptop5/mycobot_ros2/build/mycobot_280pi/install.log --single-version-externally-managed install_data
+[2.827s] running egg_info
+[2.875s] writing ../../build/mycobot_280pi/mycobot_280pi.egg-info/PKG-INFO
+[2.875s] writing dependency_links to ../../build/mycobot_280pi/mycobot_280pi.egg-info/dependency_links.txt
+[2.876s] writing entry points to ../../build/mycobot_280pi/mycobot_280pi.egg-info/entry_points.txt
+[2.877s] writing requirements to ../../build/mycobot_280pi/mycobot_280pi.egg-info/requires.txt
+[2.877s] writing top-level names to ../../build/mycobot_280pi/mycobot_280pi.egg-info/top_level.txt
+[2.975s] reading manifest file '../../build/mycobot_280pi/mycobot_280pi.egg-info/SOURCES.txt'
+[2.976s] adding license file 'LICENSE'
+[2.978s] writing manifest file '../../build/mycobot_280pi/mycobot_280pi.egg-info/SOURCES.txt'
+[2.979s] running build
+[2.979s] running build_py
+[2.980s] running install
+[2.992s] running install_lib
+[3.046s] running install_data
+[3.046s] running install_egg_info
+[3.073s] removing '/home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/python3.12/site-packages/mycobot_280pi-0.0.0-py3.12.egg-info' (and everything under it)
+[3.073s] Copying ../../build/mycobot_280pi/mycobot_280pi.egg-info to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/python3.12/site-packages/mycobot_280pi-0.0.0-py3.12.egg-info
+[3.074s] running install_scripts
+[3.227s] Installing camera_display script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.228s] Installing follow_display script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.228s] Installing listen_real script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.228s] Installing listen_real_of_topic script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.229s] Installing listen_real_service script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.229s] Installing opencv_camera script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.229s] Installing simple_gui script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.229s] Installing slider_control script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.229s] Installing slider_control_adaptive_gripper script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.229s] Installing teleop_keyboard script to /home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/mycobot_280pi
+[3.230s] writing list of installed files to '/home/laptop5/mycobot_ros2/build/mycobot_280pi/install.log'
+[3.265s] Invoked command in '/home/laptop5/mycobot_ros2/mycobot_280/mycobot_280pi' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_280pi/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_280pi/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mycobot_280pi build --build-base /home/laptop5/mycobot_ros2/build/mycobot_280pi/build install --record /home/laptop5/mycobot_ros2/build/mycobot_280pi/install.log --single-version-externally-managed install_data

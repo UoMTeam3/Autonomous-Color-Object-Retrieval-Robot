@@ -1,0 +1,11 @@
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:msg/MycobotAngles.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:msg/MycobotCoords.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:msg/MycobotSetAngles.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:msg/MycobotSetCoords.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:msg/MycobotGripperStatus.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:srv/GetAngles.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:srv/SetAngles.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:srv/GetCoords.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:srv/SetCoords.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:srv/GripperStatus.idl
+/home/laptop5/mycobot_ros2/build/mycobot_pro450_interfaces/rosidl_adapter/mycobot_pro450_interfaces:srv/GetGripperValue.idl
