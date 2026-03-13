@@ -1,0 +1,79 @@
+[5.466s] Invoking command in '/home/laptop5/mycobot_ros2/mycobot_280/mycobot_280_riscv': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_280_riscv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mycobot_280_riscv build --build-base /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build install --record /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/install.log --single-version-externally-managed install_data
+[7.805s] running egg_info
+[7.805s] creating ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info
+[7.805s] writing ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/PKG-INFO
+[7.805s] writing dependency_links to ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/dependency_links.txt
+[7.806s] writing entry points to ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/entry_points.txt
+[7.816s] writing requirements to ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/requires.txt
+[7.816s] writing top-level names to ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/top_level.txt
+[7.817s] writing manifest file '../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/SOURCES.txt'
+[7.817s] reading manifest file '../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/SOURCES.txt'
+[7.817s] adding license file 'LICENSE'
+[7.817s] writing manifest file '../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info/SOURCES.txt'
+[7.817s] running build
+[7.817s] running build_py
+[7.817s] creating /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build
+[7.818s] creating /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib
+[7.818s] creating /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.818s] copying mycobot_280_riscv/__init__.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.818s] copying mycobot_280_riscv/opencv_camera.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.818s] copying mycobot_280_riscv/camera_display.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.818s] copying mycobot_280_riscv/listen_real_service.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.818s] copying mycobot_280_riscv/teleop_keyboard.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.819s] copying mycobot_280_riscv/follow_display.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.819s] copying mycobot_280_riscv/simple_gui.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.822s] copying mycobot_280_riscv/listen_real.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.822s] copying mycobot_280_riscv/slider_control.py -> /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv
+[7.822s] running install
+[7.823s] running install_lib
+[7.823s] creating /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.823s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/__init__.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.823s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/opencv_camera.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.823s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/camera_display.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.823s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/listen_real_service.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.823s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/teleop_keyboard.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.823s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/follow_display.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.824s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/simple_gui.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.824s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/listen_real.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.824s] copying /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build/lib/mycobot_280_riscv/slider_control.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv
+[7.824s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/__init__.py to __init__.cpython-312.pyc
+[7.824s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/opencv_camera.py to opencv_camera.cpython-312.pyc
+[7.824s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/camera_display.py to camera_display.cpython-312.pyc
+[7.824s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/listen_real_service.py to listen_real_service.cpython-312.pyc
+[7.825s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/teleop_keyboard.py to teleop_keyboard.cpython-312.pyc
+[7.825s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/follow_display.py to follow_display.cpython-312.pyc
+[7.834s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/simple_gui.py to simple_gui.cpython-312.pyc
+[7.834s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/listen_real.py to listen_real.cpython-312.pyc
+[7.835s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv/slider_control.py to slider_control.cpython-312.pyc
+[7.835s] running install_data
+[7.835s] creating /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/ament_index
+[7.835s] creating /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/ament_index/resource_index
+[7.835s] creating /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/ament_index/resource_index/packages
+[7.836s] copying resource/mycobot_280_riscv -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/ament_index/resource_index/packages
+[7.836s] copying package.xml -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv
+[7.836s] creating /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.836s] copying launch/slider_control.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.836s] copying launch/mycobot_follow.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.837s] copying launch/test_pump.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.847s] copying launch/simple_gui.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.847s] copying launch/test_camera_flange.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.847s] copying launch/test.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.848s] copying launch/slider_control_pump.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.848s] copying launch/test_camera_flange_pump.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.848s] copying launch/teleop_keyboard.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.848s] copying launch/slider_control_camera_flange.launch.py -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/launch
+[7.848s] creating /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/config
+[7.849s] copying config/mycobot_280_riscv.rviz -> /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/share/mycobot_280_riscv/config
+[7.849s] running install_egg_info
+[7.849s] Copying ../../build/mycobot_280_riscv/mycobot_280_riscv.egg-info to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages/mycobot_280_riscv-0.0.0-py3.12.egg-info
+[7.849s] running install_scripts
+[7.849s] Installing camera_display script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.849s] Installing follow_display script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.850s] Installing listen_real script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.853s] Installing listen_real_service script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.854s] Installing opencv_camera script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.854s] Installing simple_gui script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.854s] Installing slider_control script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.854s] Installing teleop_keyboard script to /home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/mycobot_280_riscv
+[7.855s] writing list of installed files to '/home/laptop5/mycobot_ros2/build/mycobot_280_riscv/install.log'
+[7.946s] Invoked command in '/home/laptop5/mycobot_ros2/mycobot_280/mycobot_280_riscv' returned '0': AMENT_PREFIX_PATH=/home/laptop5/mycobot_ros2/install/mycobot_description:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_280_riscv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_280_riscv/lib/python3.12/site-packages:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mycobot_280_riscv build --build-base /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/build install --record /home/laptop5/mycobot_ros2/build/mycobot_280_riscv/install.log --single-version-externally-managed install_data

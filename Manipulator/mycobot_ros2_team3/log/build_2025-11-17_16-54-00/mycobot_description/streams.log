@@ -1,0 +1,370 @@
+[0.943s] Invoking command in '/home/laptop5/mycobot_ros2/mycobot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mycobot_description build --build-base /home/laptop5/mycobot_ros2/build/mycobot_description/build install --record /home/laptop5/mycobot_ros2/build/mycobot_description/install.log --single-version-externally-managed install_data
+[1.254s] running egg_info
+[1.279s] writing ../build/mycobot_description/mycobot_description.egg-info/PKG-INFO
+[1.279s] writing dependency_links to ../build/mycobot_description/mycobot_description.egg-info/dependency_links.txt
+[1.280s] writing requirements to ../build/mycobot_description/mycobot_description.egg-info/requires.txt
+[1.280s] writing top-level names to ../build/mycobot_description/mycobot_description.egg-info/top_level.txt
+[1.325s] reading manifest file '../build/mycobot_description/mycobot_description.egg-info/SOURCES.txt'
+[1.326s] adding license file 'LICENSE'
+[1.329s] writing manifest file '../build/mycobot_description/mycobot_description.egg-info/SOURCES.txt'
+[1.329s] running build
+[1.329s] running build_py
+[1.330s] running install
+[1.337s] running install_lib
+[1.356s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages/mycobot_description
+[1.356s] copying /home/laptop5/mycobot_ros2/build/mycobot_description/build/lib/mycobot_description/__init__.py -> /home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages/mycobot_description
+[1.356s] byte-compiling /home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages/mycobot_description/__init__.py to __init__.cpython-312.pyc
+[1.356s] running install_data
+[1.357s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/ament_index
+[1.357s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/ament_index/resource_index
+[1.357s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/ament_index/resource_index/packages
+[1.357s] copying resource/mycobot_description -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/ament_index/resource_index/packages
+[1.358s] copying package.xml -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description
+[1.358s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf
+[1.358s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.358s] copying urdf/mypalletizer_260_pi/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.359s] copying urdf/mypalletizer_260_pi/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.363s] copying urdf/mypalletizer_260_pi/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.367s] copying urdf/mypalletizer_260_pi/mypalletizer_260_pi_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.367s] copying urdf/mypalletizer_260_pi/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.369s] copying urdf/mypalletizer_260_pi/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.371s] copying urdf/mypalletizer_260_pi/suit_env.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.377s] copying urdf/mypalletizer_260_pi/mypalletizer_260_pi.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.377s] copying urdf/mypalletizer_260_pi/mypalletizer_260_pi_aikit.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.377s] copying urdf/mypalletizer_260_pi/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_pi
+[1.378s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.378s] copying urdf/mypalletizer_260_m5/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.378s] copying urdf/mypalletizer_260_m5/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.382s] copying urdf/mypalletizer_260_m5/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.385s] copying urdf/mypalletizer_260_m5/mypalletizer_260_m5_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.385s] copying urdf/mypalletizer_260_m5/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.387s] copying urdf/mypalletizer_260_m5/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.389s] copying urdf/mypalletizer_260_m5/mypalletizer_260_m5.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.389s] copying urdf/mypalletizer_260_m5/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mypalletizer_260_m5
+[1.389s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.389s] copying urdf/mycobot_280_jn/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.390s] copying urdf/mycobot_280_jn/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.392s] copying urdf/mycobot_280_jn/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.392s] copying urdf/mycobot_280_jn/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.393s] copying urdf/mycobot_280_jn/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.393s] copying urdf/mycobot_280_jn/mycobot_280_jn.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.393s] copying urdf/mycobot_280_jn/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.394s] copying urdf/mycobot_280_jn/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.394s] copying urdf/mycobot_280_jn/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.395s] copying urdf/mycobot_280_jn/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.396s] copying urdf/mycobot_280_jn/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.399s] copying urdf/mycobot_280_jn/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.399s] copying urdf/mycobot_280_jn/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.399s] copying urdf/mycobot_280_jn/mycobot_280_jn_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.399s] copying urdf/mycobot_280_jn/joint1_jet.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_jn
+[1.404s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.404s] copying urdf/mycobot_320_m5_2022/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.406s] copying urdf/mycobot_320_m5_2022/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.417s] copying urdf/mycobot_320_m5_2022/mycobot_320_m5_2022_force_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.417s] copying urdf/mycobot_320_m5_2022/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.419s] copying urdf/mycobot_320_m5_2022/mycobot_320_m5_2022_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.420s] copying urdf/mycobot_320_m5_2022/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.421s] copying urdf/mycobot_320_m5_2022/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.423s] copying urdf/mycobot_320_m5_2022/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.423s] copying urdf/mycobot_320_m5_2022/mycobot_320_m5_2022.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.423s] copying urdf/mycobot_320_m5_2022/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_m5_2022
+[1.425s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.425s] copying urdf/mycobot_pro_600/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.428s] copying urdf/mycobot_pro_600/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.431s] copying urdf/mycobot_pro_600/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.435s] copying urdf/mycobot_pro_600/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.439s] copying urdf/mycobot_pro_600/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.440s] copying urdf/mycobot_pro_600/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.442s] copying urdf/mycobot_pro_600/mycobot_pro_600.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.442s] copying urdf/mycobot_pro_600/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_600
+[1.446s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.446s] copying urdf/mycobot_280_m5/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.446s] copying urdf/mycobot_280_m5/mycobot_step.STEP -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.483s] copying urdf/mycobot_280_m5/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.485s] copying urdf/mycobot_280_m5/mycobot_280_m5_with_pump.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.485s] copying urdf/mycobot_280_m5/noenv.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.485s] copying urdf/mycobot_280_m5/mycobot_280_m5_with_camera_flange_pump.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.485s] copying urdf/mycobot_280_m5/pump_box.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.486s] copying urdf/mycobot_280_m5/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.486s] copying urdf/mycobot_280_m5/mycobot_280_m5_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.486s] copying urdf/mycobot_280_m5/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.486s] copying urdf/mycobot_280_m5/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.486s] copying urdf/mycobot_280_m5/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.487s] copying urdf/mycobot_280_m5/mycobot_280_m5.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.488s] copying urdf/mycobot_280_m5/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.488s] copying urdf/mycobot_280_m5/mycobot_with_vision_copy.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.488s] copying urdf/mycobot_280_m5/joint1.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.488s] copying urdf/mycobot_280_m5/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.489s] copying urdf/mycobot_280_m5/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.491s] copying urdf/mycobot_280_m5/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.492s] copying urdf/mycobot_280_m5/pump_head.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.494s] copying urdf/mycobot_280_m5/suit_env.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.500s] copying urdf/mycobot_280_m5/withenv.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.500s] copying urdf/mycobot_280_m5/G_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.503s] copying urdf/mycobot_280_m5/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.504s] copying urdf/mycobot_280_m5/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.504s] copying urdf/mycobot_280_m5/mycobot_with_vision.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.504s] copying urdf/mycobot_280_m5/joint1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.505s] copying urdf/mycobot_280_m5/camera_flange.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.507s] copying urdf/mycobot_280_m5/mycobot_280_m5_with_camera_flange.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_m5
+[1.507s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.508s] copying urdf/mycobot_280_pi/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.508s] copying urdf/mycobot_280_pi/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.510s] copying urdf/mycobot_280_pi/joint1_pi.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.519s] copying urdf/mycobot_280_pi/pump_box.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.520s] copying urdf/mycobot_280_pi/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.520s] copying urdf/mycobot_280_pi/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.521s] copying urdf/mycobot_280_pi/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.521s] copying urdf/mycobot_280_pi/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.522s] copying urdf/mycobot_280_pi/mycobot_280_pi_with_camera_flange.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.522s] copying urdf/mycobot_280_pi/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.522s] copying urdf/mycobot_280_pi/joint1.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.523s] copying urdf/mycobot_280_pi/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.523s] copying urdf/mycobot_280_pi/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.525s] copying urdf/mycobot_280_pi/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.527s] copying urdf/mycobot_280_pi/pump_head.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.528s] copying urdf/mycobot_280_pi/G_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.533s] copying urdf/mycobot_280_pi/mycobot_280_pi_with_camera_flange_pump.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.533s] copying urdf/mycobot_280_pi/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.533s] copying urdf/mycobot_280_pi/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.533s] copying urdf/mycobot_280_pi/camera_flange.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.535s] copying urdf/mycobot_280_pi/mycobot_280_pi_with_pump.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.535s] copying urdf/mycobot_280_pi/mycobot_280_pi_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.535s] copying urdf/mycobot_280_pi/mycobot_280_pi.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_pi
+[1.535s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.535s] copying urdf/mecharm_270_m5/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.537s] copying urdf/mecharm_270_m5/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.539s] copying urdf/mecharm_270_m5/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.541s] copying urdf/mecharm_270_m5/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.545s] copying urdf/mecharm_270_m5/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.550s] copying urdf/mecharm_270_m5/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.552s] copying urdf/mecharm_270_m5/mecharm_270_m5.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.552s] copying urdf/mecharm_270_m5/mecharm_270_m5_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.552s] copying urdf/mecharm_270_m5/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_m5
+[1.554s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.554s] copying urdf/mecharm_270_pi/mecharm_270_pi.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.555s] copying urdf/mecharm_270_pi/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.558s] copying urdf/mecharm_270_pi/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.563s] copying urdf/mecharm_270_pi/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.566s] copying urdf/mecharm_270_pi/mecharm_270_pi_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.566s] copying urdf/mecharm_270_pi/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.569s] copying urdf/mecharm_270_pi/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.572s] copying urdf/mecharm_270_pi/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.573s] copying urdf/mecharm_270_pi/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mecharm_270_pi
+[1.574s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.574s] copying urdf/mycobot_320_pi_2022/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.575s] copying urdf/mycobot_320_pi_2022/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.591s] copying urdf/mycobot_320_pi_2022/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.593s] copying urdf/mycobot_320_pi_2022/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.595s] copying urdf/mycobot_320_pi_2022/mycobot_320_pi_2022_force_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.595s] copying urdf/mycobot_320_pi_2022/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.597s] copying urdf/mycobot_320_pi_2022/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.597s] copying urdf/mycobot_320_pi_2022/mycobot_320_pi_2022_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.597s] copying urdf/mycobot_320_pi_2022/mycobot_320_pi_2022.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.598s] copying urdf/mycobot_320_pi_2022/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_pi_2022
+[1.598s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.599s] copying urdf/mybuddy/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.599s] copying urdf/mybuddy/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.601s] copying urdf/mybuddy/joint2_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.603s] copying urdf/mybuddy/joint1_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.604s] copying urdf/mybuddy/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.604s] copying urdf/mybuddy/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.604s] copying urdf/mybuddy/joint6_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.604s] copying urdf/mybuddy/joint4_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.606s] copying urdf/mybuddy/joint6_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.607s] copying urdf/mybuddy/joint5_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.608s] copying urdf/mybuddy/joint3_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.609s] copying urdf/mybuddy/mybuddy.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.609s] copying urdf/mybuddy/mybuddy-up.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.616s] copying urdf/mybuddy/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.616s] copying urdf/mybuddy/mybuddy-down.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.617s] copying urdf/mybuddy/joint3_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.617s] copying urdf/mybuddy/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.617s] copying urdf/mybuddy/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.618s] copying urdf/mybuddy/joint1_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.619s] copying urdf/mybuddy/joint4_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.620s] copying urdf/mybuddy/joint2_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.622s] copying urdf/mybuddy/joint5_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mybuddy
+[1.623s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.623s] copying urdf/ultraArm_p340/ultraArm-1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.626s] copying urdf/ultraArm_p340/ultraArm_p340.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.626s] copying urdf/ultraArm_p340/ultraArm-3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.627s] copying urdf/ultraArm_p340/ultraArm_p340_aiki.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.627s] copying urdf/ultraArm_p340/ultraArm-base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.628s] copying urdf/ultraArm_p340/suit_env.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.634s] copying urdf/ultraArm_p340/ultraArm-2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/ultraArm_p340
+[1.635s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.636s] copying urdf/mycobot_280_x3pi/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.636s] copying urdf/mycobot_280_x3pi/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.637s] copying urdf/mycobot_280_x3pi/joint1_pi.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.644s] copying urdf/mycobot_280_x3pi/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.644s] copying urdf/mycobot_280_x3pi/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.645s] copying urdf/mycobot_280_x3pi/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.645s] copying urdf/mycobot_280_x3pi/mycobot_280_x3pi.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.645s] copying urdf/mycobot_280_x3pi/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.645s] copying urdf/mycobot_280_x3pi/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.645s] copying urdf/mycobot_280_x3pi/joint1.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.646s] copying urdf/mycobot_280_x3pi/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.646s] copying urdf/mycobot_280_x3pi/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.648s] copying urdf/mycobot_280_x3pi/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.649s] copying urdf/mycobot_280_x3pi/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.650s] copying urdf/mycobot_280_x3pi/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_x3pi
+[1.650s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.650s] copying urdf/myarm_300_pi/j7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.650s] copying urdf/myarm_300_pi/j2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.654s] copying urdf/myarm_300_pi/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.656s] copying urdf/myarm_300_pi/j1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.659s] copying urdf/myarm_300_pi/j5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.660s] copying urdf/myarm_300_pi/j3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.663s] copying urdf/myarm_300_pi/j6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.664s] copying urdf/myarm_300_pi/j4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.668s] copying urdf/myarm_300_pi/myarm_300_pi.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_300_pi
+[1.668s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.668s] copying urdf/myarm_c650/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.683s] copying urdf/myarm_c650/myarm_basic_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.708s] copying urdf/myarm_c650/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.715s] copying urdf/myarm_c650/myarm_c650.urdf.xacro -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.716s] copying urdf/myarm_c650/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.724s] copying urdf/myarm_c650/myarm_c_grip_Base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.732s] copying urdf/myarm_c650/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.749s] copying urdf/myarm_c650/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.755s] copying urdf/myarm_c650/myarm_c_grip_L.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.756s] copying urdf/myarm_c650/myarm_c_grip_R.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.756s] copying urdf/myarm_c650/myarm_c650.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.756s] copying urdf/myarm_c650/joint1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.760s] copying urdf/myarm_c650/endeffector.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_c650
+[1.773s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.774s] copying urdf/myarm_m750/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.784s] copying urdf/myarm_m750/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.793s] copying urdf/myarm_m750/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.804s] copying urdf/myarm_m750/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.834s] copying urdf/myarm_m750/myarm_m750_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.838s] copying urdf/myarm_m750/finger_holder.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.851s] copying urdf/myarm_m750/finger_left.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.852s] copying urdf/myarm_m750/myarm_m750.urdf.xacro -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.852s] copying urdf/myarm_m750/endeffector.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.862s] copying urdf/myarm_m750/myarm_m750.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.862s] copying urdf/myarm_m750/finger_right.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.863s] copying urdf/myarm_m750/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/myarm_m750
+[1.871s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.872s] copying urdf/mycobot_pro_630/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.872s] copying urdf/mycobot_pro_630/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.875s] copying urdf/mycobot_pro_630/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.876s] copying urdf/mycobot_pro_630/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.878s] copying urdf/mycobot_pro_630/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.878s] copying urdf/mycobot_pro_630/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.879s] copying urdf/mycobot_pro_630/mycobot_pro_630.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.879s] copying urdf/mycobot_pro_630/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_630
+[1.880s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.880s] copying urdf/mycobot_280_riscv/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.881s] copying urdf/mycobot_280_riscv/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.883s] copying urdf/mycobot_280_riscv/joint1_pi.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.889s] copying urdf/mycobot_280_riscv/pump_box.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.890s] copying urdf/mycobot_280_riscv/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.890s] copying urdf/mycobot_280_riscv/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.890s] copying urdf/mycobot_280_riscv/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.890s] copying urdf/mycobot_280_riscv/mycobot_280_riscv_with_pump.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.890s] copying urdf/mycobot_280_riscv/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.891s] copying urdf/mycobot_280_riscv/mycobot_280_riscv.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.892s] copying urdf/mycobot_280_riscv/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.892s] copying urdf/mycobot_280_riscv/joint1.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.892s] copying urdf/mycobot_280_riscv/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.892s] copying urdf/mycobot_280_riscv/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.894s] copying urdf/mycobot_280_riscv/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.895s] copying urdf/mycobot_280_riscv/mycobot_280_riscv_with_camera_flange_pump.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.895s] copying urdf/mycobot_280_riscv/pump_head.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.897s] copying urdf/mycobot_280_riscv/G_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.901s] copying urdf/mycobot_280_riscv/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.901s] copying urdf/mycobot_280_riscv/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.901s] copying urdf/mycobot_280_riscv/camera_flange.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.902s] copying urdf/mycobot_280_riscv/mycobot_280_riscv_with_camera_flange.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_riscv
+[1.903s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.903s] copying urdf/mycobot_280_rdkx5/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.903s] copying urdf/mycobot_280_rdkx5/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.905s] copying urdf/mycobot_280_rdkx5/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.905s] copying urdf/mycobot_280_rdkx5/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.906s] copying urdf/mycobot_280_rdkx5/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.906s] copying urdf/mycobot_280_rdkx5/mycobot_280_rdkx5.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.906s] copying urdf/mycobot_280_rdkx5/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.907s] copying urdf/mycobot_280_rdkx5/mycobot_280_rdkx5_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.907s] copying urdf/mycobot_280_rdkx5/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.907s] copying urdf/mycobot_280_rdkx5/joint1.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.908s] copying urdf/mycobot_280_rdkx5/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.908s] copying urdf/mycobot_280_rdkx5/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.911s] copying urdf/mycobot_280_rdkx5/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.913s] copying urdf/mycobot_280_rdkx5/joint1_rdkx5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.918s] copying urdf/mycobot_280_rdkx5/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.919s] copying urdf/mycobot_280_rdkx5/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_rdkx5
+[1.919s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.919s] copying urdf/mycobot_320_riscv/link4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.923s] copying urdf/mycobot_320_riscv/base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.943s] copying urdf/mycobot_320_riscv/link3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.951s] copying urdf/mycobot_320_riscv/link2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.959s] copying urdf/mycobot_320_riscv/link1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.965s] copying urdf/mycobot_320_riscv/link6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.965s] copying urdf/mycobot_320_riscv/mycobot_320_riscv.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.966s] copying urdf/mycobot_320_riscv/link5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_320_riscv
+[1.970s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.971s] copying urdf/adaptive_gripper/gripper_left1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.971s] copying urdf/adaptive_gripper/gripper_right3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.971s] copying urdf/adaptive_gripper/gripper_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.973s] copying urdf/adaptive_gripper/gripper_right1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.973s] copying urdf/adaptive_gripper/mycobot_adaptive_gripper.xacro -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.973s] copying urdf/adaptive_gripper/gripper_left3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.974s] copying urdf/adaptive_gripper/gripper_right2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.974s] copying urdf/adaptive_gripper/gripper_left2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.974s] copying urdf/adaptive_gripper/mycobot_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/adaptive_gripper
+[1.975s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.975s] copying urdf/mycobot_280_arduino/joint7.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.975s] copying urdf/mycobot_280_arduino/joint3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.977s] copying urdf/mycobot_280_arduino/joint3.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.977s] copying urdf/mycobot_280_arduino/joint4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.978s] copying urdf/mycobot_280_arduino/joint4.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.978s] copying urdf/mycobot_280_arduino/joint7.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.979s] copying urdf/mycobot_280_arduino/joint2.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.979s] copying urdf/mycobot_280_arduino/joint1.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.980s] copying urdf/mycobot_280_arduino/joint6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.981s] copying urdf/mycobot_280_arduino/joint5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.984s] copying urdf/mycobot_280_arduino/joint2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.985s] copying urdf/mycobot_280_arduino/G_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.988s] copying urdf/mycobot_280_arduino/mycobot_280_arduino.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.988s] copying urdf/mycobot_280_arduino/joint6.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.988s] copying urdf/mycobot_280_arduino/joint5.png -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.988s] copying urdf/mycobot_280_arduino/joint1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.993s] copying urdf/mycobot_280_arduino/mycobot_280_arduino_adaptive_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_280_arduino
+[1.993s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[1.994s] copying urdf/pro_adaptive_gripper/pro_gripper_camera_flange.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[1.994s] copying urdf/pro_adaptive_gripper/gripper_left1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[1.996s] copying urdf/pro_adaptive_gripper/gripper_right3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[1.999s] copying urdf/pro_adaptive_gripper/gripper_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.021s] copying urdf/pro_adaptive_gripper/gripper_right1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.024s] copying urdf/pro_adaptive_gripper/gripper_left3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.027s] copying urdf/pro_adaptive_gripper/gripper_right2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.029s] copying urdf/pro_adaptive_gripper/gripper_left2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.031s] copying urdf/pro_adaptive_gripper/pro_camera_flange.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.032s] copying urdf/pro_adaptive_gripper/mycobot_pro_adaptive_gripper_new.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_adaptive_gripper
+[2.032s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.032s] copying urdf/pro_force_gripper/mygripper_f100_connection.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.033s] copying urdf/pro_force_gripper/pro_gripper_right3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.037s] copying urdf/pro_force_gripper/pro_gripper_left2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.037s] copying urdf/pro_force_gripper/pro_gripper_right2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.038s] copying urdf/pro_force_gripper/pro_gripper_base.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.055s] copying urdf/pro_force_gripper/pro_gripper_left3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.058s] copying urdf/pro_force_gripper/pro_gripper_left1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.060s] copying urdf/pro_force_gripper/pro_gripper_right1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/pro_force_gripper
+[2.062s] creating /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.062s] copying urdf/mycobot_pro_450/PRO450_J1.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.064s] copying urdf/mycobot_pro_450/PRO450_J2.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.064s] copying urdf/mycobot_pro_450/PRO450_J6_end.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.065s] copying urdf/mycobot_pro_450/mycobot_pro_450_force_gripper.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.065s] copying urdf/mycobot_pro_450/PRO450_J5.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.065s] copying urdf/mycobot_pro_450/PRO450_J3.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.066s] copying urdf/mycobot_pro_450/PRO450_J4.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.066s] copying urdf/mycobot_pro_450/mycobot_pro_450.urdf -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.067s] copying urdf/mycobot_pro_450/PRO450_J6.dae -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.067s] copying urdf/mycobot_pro_450/mycobot_pro_450.urdf.xacro -> /home/laptop5/mycobot_ros2/install/mycobot_description/share/mycobot_description/urdf/mycobot_pro_450
+[2.067s] running install_egg_info
+[2.088s] Copying ../build/mycobot_description/mycobot_description.egg-info to /home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages/mycobot_description-0.0.0-py3.12.egg-info
+[2.089s] running install_scripts
+[2.224s] writing list of installed files to '/home/laptop5/mycobot_ros2/build/mycobot_description/install.log'
+[2.251s] Invoked command in '/home/laptop5/mycobot_ros2/mycobot_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/laptop5/mycobot_ros2/build/mycobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/laptop5/mycobot_ros2/install/mycobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mycobot_description build --build-base /home/laptop5/mycobot_ros2/build/mycobot_description/build install --record /home/laptop5/mycobot_ros2/build/mycobot_description/install.log --single-version-externally-managed install_data

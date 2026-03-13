@@ -1,0 +1,23 @@
+{
+  "package_name": "mecharm_interfaces",
+  "output_dir": "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_generator_type_description/mecharm_interfaces",
+  "idl_tuples": [
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:msg/MecharmAngles.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:msg/MecharmCoords.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:msg/MecharmSetAngles.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:msg/MecharmSetCoords.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:msg/MecharmGripperStatus.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:msg/MecharmPumpStatus.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:srv/GetAngles.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:srv/SetAngles.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:srv/GetCoords.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:srv/SetCoords.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:srv/GripperStatus.idl",
+    "/home/laptop5/mycobot_ros2/build/mecharm_interfaces/rosidl_adapter/mecharm_interfaces:srv/PumpStatus.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs"
+  ]
+}

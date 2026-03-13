@@ -1,0 +1,3 @@
+gmake[2]: *** [CMakeFiles/mycobot_interfaces__rosidl_generator_py.dir/build.make:104: CMakeFiles/mycobot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/mycobot_interfaces/msg/_mycobot_set_angles_s.c.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:506: CMakeFiles/mycobot_interfaces__rosidl_generator_py.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

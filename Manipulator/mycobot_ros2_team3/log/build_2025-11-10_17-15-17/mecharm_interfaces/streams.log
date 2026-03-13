@@ -1,0 +1,182 @@
+[0.274s] Invoking command in '/home/laptop5/mycobot_ros2/build/mecharm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/laptop5/mycobot_ros2/mecharm/mecharm_interfaces -DCMAKE_INSTALL_PREFIX=/home/laptop5/mycobot_ros2/install/mecharm_interfaces
+[0.467s] -- The C compiler identification is GNU 13.3.0
+[0.615s] -- The CXX compiler identification is GNU 13.3.0
+[0.643s] -- Detecting C compiler ABI info
+[0.831s] -- Detecting C compiler ABI info - done
+[0.857s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.858s] -- Detecting C compile features
+[0.859s] -- Detecting C compile features - done
+[0.877s] -- Detecting CXX compiler ABI info
+[1.080s] -- Detecting CXX compiler ABI info - done
+[1.096s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.096s] -- Detecting CXX compile features
+[1.097s] -- Detecting CXX compile features - done
+[1.112s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.377s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.578s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.600s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.765s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.916s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.930s] -- Found rclpy: 7.1.5 (/opt/ros/jazzy/share/rclpy/cmake)
+[1.939s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[3.803s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[4.701s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.757s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.767s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[5.968s] -- Found PythonExtra: /usr/bin/python3  
+[6.993s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[7.187s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.445s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.469s] -- Added test 'lint_cmake' to check CMake code style
+[7.479s] -- Added test 'xmllint' to check XML markup files
+[7.501s] -- Configuring done (7.2s)
+[7.795s] -- Generating done (0.2s)
+[7.857s] -- Build files have been written to: /home/laptop5/mycobot_ros2/build/mecharm_interfaces
+[7.925s] Invoked command in '/home/laptop5/mycobot_ros2/build/mecharm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/laptop5/mycobot_ros2/mecharm/mecharm_interfaces -DCMAKE_INSTALL_PREFIX=/home/laptop5/mycobot_ros2/install/mecharm_interfaces
+[7.927s] Invoking command in '/home/laptop5/mycobot_ros2/build/mecharm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/laptop5/elephant_ws_two/install/mycobot_280pi:/home/laptop5/elephant_arm_ws/install/mycobot_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/laptop5/mycobot_ros2/build/mecharm_interfaces -- -j12 -l12
+[8.313s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[8.346s] [  1%] Built target ament_cmake_python_copy_mecharm_interfaces
+[10.052s] running egg_info
+[10.062s] creating mecharm_interfaces.egg-info
+[10.182s] writing mecharm_interfaces.egg-info/PKG-INFO
+[10.182s] writing dependency_links to mecharm_interfaces.egg-info/dependency_links.txt
+[10.186s] writing top-level names to mecharm_interfaces.egg-info/top_level.txt
+[10.186s] writing manifest file 'mecharm_interfaces.egg-info/SOURCES.txt'
+[10.467s] [  1%] Built target mecharm_interfaces__rosidl_generator_type_description
+[10.542s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[10.590s] reading manifest file 'mecharm_interfaces.egg-info/SOURCES.txt'
+[10.595s] writing manifest file 'mecharm_interfaces.egg-info/SOURCES.txt'
+[10.600s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.783s] [  2%] Built target ament_cmake_python_build_mecharm_interfaces_egg
+[14.310s] [  2%] Built target mecharm_interfaces__cpp
+[15.342s] [  2%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_angles__description.c.o[0m
+[15.367s] [  3%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_angles__functions.c.o[0m
+[15.383s] [  4%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_coords__type_support.c.o[0m
+[15.402s] [  5%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_set_angles__functions.c.o[0m
+[15.403s] [  6%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_angles__type_support.c.o[0m
+[15.417s] [  6%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_coords__description.c.o[0m
+[15.417s] [  6%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_set_angles__description.c.o[0m
+[15.417s] [  6%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_set_coords__functions.c.o[0m
+[15.430s] [  7%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_coords__functions.c.o[0m
+[15.430s] [  8%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_set_coords__type_support.c.o[0m
+[15.430s] [  9%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_set_angles__type_support.c.o[0m
+[15.431s] [ 10%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_set_coords__description.c.o[0m
+[15.667s] [ 11%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_gripper_status__description.c.o[0m
+[15.690s] [ 11%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_gripper_status__functions.c.o[0m
+[15.716s] [ 12%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_gripper_status__type_support.c.o[0m
+[15.785s] [ 12%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_pump_status__functions.c.o[0m
+[15.801s] [ 13%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_pump_status__description.c.o[0m
+[15.849s] [ 14%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/msg/detail/mecharm_pump_status__type_support.c.o[0m
+[15.898s] [ 14%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/get_angles__functions.c.o[0m
+[15.914s] [ 15%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/get_angles__description.c.o[0m
+[16.077s] [ 16%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/set_angles__description.c.o[0m
+[16.088s] [ 17%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/get_angles__type_support.c.o[0m
+[16.111s] [ 18%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/get_coords__description.c.o[0m
+[16.123s] [ 19%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/set_angles__functions.c.o[0m
+[16.164s] [ 20%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/get_coords__functions.c.o[0m
+[16.167s] [ 20%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/set_angles__type_support.c.o[0m
+[16.217s] [ 20%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/get_coords__type_support.c.o[0m
+[16.335s] [ 21%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/set_coords__functions.c.o[0m
+[16.345s] [ 22%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/set_coords__description.c.o[0m
+[16.469s] [ 23%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/gripper_status__description.c.o[0m
+[16.469s] [ 23%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/set_coords__type_support.c.o[0m
+[16.563s] [ 24%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/gripper_status__functions.c.o[0m
+[16.588s] [ 25%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/gripper_status__type_support.c.o[0m
+[16.634s] [ 26%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/pump_status__type_support.c.o[0m
+[16.688s] [ 27%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/pump_status__functions.c.o[0m
+[16.689s] [ 27%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/mecharm_interfaces/srv/detail/pump_status__description.c.o[0m
+[17.143s] [ 27%] [32m[1mLinking C shared library libmecharm_interfaces__rosidl_generator_c.so[0m
+[17.369s] [ 27%] Built target mecharm_interfaces__rosidl_generator_c
+[17.457s] [ 28%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[17.460s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[17.460s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[17.467s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[17.467s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[17.471s] [ 31%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[20.683s] [ 32%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/msg/mecharm_set_angles__type_support.cpp.o[0m
+[20.690s] [ 33%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/msg/mecharm_gripper_status__type_support.cpp.o[0m
+[20.704s] [ 33%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/msg/mecharm_set_coords__type_support.cpp.o[0m
+[20.736s] [ 34%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/srv/get_angles__type_support.cpp.o[0m
+[20.737s] [ 35%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/msg/mecharm_pump_status__type_support.cpp.o[0m
+[20.761s] [ 35%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/msg/mecharm_angles__type_support.cpp.o[0m
+[20.763s] [ 36%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/msg/mecharm_coords__type_support.cpp.o[0m
+[20.911s] [ 36%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/srv/set_angles__type_support.cpp.o[0m
+[21.303s] [ 37%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/srv/get_coords__type_support.cpp.o[0m
+[21.396s] [ 38%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/srv/set_coords__type_support.cpp.o[0m
+[21.423s] [ 39%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/srv/pump_status__type_support.cpp.o[0m
+[21.428s] [ 39%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/mecharm_interfaces/srv/gripper_status__type_support.cpp.o[0m
+[22.012s] [ 40%] [32m[1mLinking CXX shared library libmecharm_interfaces__rosidl_typesupport_c.so[0m
+[22.447s] [ 40%] Built target mecharm_interfaces__rosidl_typesupport_c
+[22.565s] [ 40%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/msg/detail/mecharm_pump_status__type_support.cpp.o[0m
+[22.569s] [ 41%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/msg/detail/mecharm_angles__type_support.cpp.o[0m
+[22.644s] [ 42%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/msg/detail/mecharm_set_angles__type_support.cpp.o[0m
+[22.669s] [ 43%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/msg/detail/mecharm_coords__type_support.cpp.o[0m
+[22.675s] [ 44%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/msg/detail/mecharm_set_coords__type_support.cpp.o[0m
+[22.675s] [ 44%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/msg/detail/mecharm_gripper_status__type_support.cpp.o[0m
+[23.836s] [ 45%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/srv/detail/get_angles__type_support.cpp.o[0m
+[23.879s] [ 46%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/srv/detail/set_angles__type_support.cpp.o[0m
+[25.056s] [ 47%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/srv/detail/get_coords__type_support.cpp.o[0m
+[25.611s] [ 47%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/srv/detail/set_coords__type_support.cpp.o[0m
+[27.479s] [ 48%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/msg/detail/dds_fastrtps/mecharm_angles__type_support.cpp.o[0m
+[27.922s] [ 48%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/msg/detail/mecharm_angles__type_support.c.o[0m
+[27.968s] [ 49%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/msg/mecharm_angles__type_support.cpp.o[0m
+[28.411s] [ 50%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/msg/detail/mecharm_coords__type_support.c.o[0m
+[28.845s] [ 51%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/msg/detail/mecharm_set_angles__type_support.c.o[0m
+[29.198s] [ 51%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/msg/detail/mecharm_set_coords__type_support.c.o[0m
+[29.220s] [ 52%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/msg/mecharm_coords__type_support.cpp.o[0m
+[29.343s] [ 53%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/msg/detail/mecharm_gripper_status__type_support.c.o[0m
+[29.591s] [ 54%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/msg/detail/mecharm_pump_status__type_support.c.o[0m
+[29.793s] [ 54%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/srv/detail/get_angles__type_support.c.o[0m
+[29.900s] [ 55%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/srv/detail/pump_status__type_support.cpp.o[0m
+[30.089s] [ 56%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/srv/detail/set_angles__type_support.c.o[0m
+[30.499s] [ 57%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/srv/detail/dds_fastrtps/get_angles__type_support.cpp.o[0m
+[30.571s] [ 58%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/srv/detail/get_coords__type_support.c.o[0m
+[30.917s] [ 59%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/srv/detail/set_coords__type_support.c.o[0m
+[31.054s] [ 60%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/msg/detail/mecharm_angles__type_support_c.cpp.o[0m
+[31.210s] [ 60%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/srv/detail/gripper_status__type_support.c.o[0m
+[31.629s] [ 61%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/msg/mecharm_set_angles__type_support.cpp.o[0m
+[31.675s] [ 62%] [32mBuilding C object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mecharm_interfaces/srv/detail/pump_status__type_support.c.o[0m
+[31.968s] [ 63%] [32m[1mLinking C shared library libmecharm_interfaces__rosidl_typesupport_introspection_c.so[0m
+[32.174s] [ 63%] Built target mecharm_interfaces__rosidl_typesupport_introspection_c
+[32.834s] [ 64%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mecharm_interfaces/srv/detail/gripper_status__type_support.cpp.o[0m
+[33.480s] [ 64%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/msg/mecharm_set_coords__type_support.cpp.o[0m
+[33.584s] [ 64%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/msg/detail/mecharm_set_angles__type_support_c.cpp.o[0m
+[34.633s] [ 64%] [32m[1mLinking CXX shared library libmecharm_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[34.705s] [ 65%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/srv/detail/dds_fastrtps/get_coords__type_support.cpp.o[0m
+[34.908s] [ 66%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/msg/mecharm_gripper_status__type_support.cpp.o[0m
+[35.063s] [ 66%] Built target mecharm_interfaces__rosidl_typesupport_introspection_cpp
+[35.357s] [ 67%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/msg/detail/mecharm_set_coords__type_support_c.cpp.o[0m
+[36.462s] [ 68%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/msg/mecharm_pump_status__type_support.cpp.o[0m
+[37.052s] [ 69%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/msg/detail/mecharm_coords__type_support_c.cpp.o[0m
+[37.739s] [ 69%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/srv/get_angles__type_support.cpp.o[0m
+[38.842s] [ 69%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/srv/detail/dds_fastrtps/pump_status__type_support.cpp.o[0m
+[39.890s] [ 70%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/srv/set_angles__type_support.cpp.o[0m
+[39.989s] [ 71%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/msg/detail/mecharm_gripper_status__type_support_c.cpp.o[0m
+[41.400s] [ 72%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/srv/get_coords__type_support.cpp.o[0m
+[41.444s] [ 73%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/srv/detail/dds_fastrtps/gripper_status__type_support.cpp.o[0m
+[42.075s] [ 74%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/srv/detail/get_angles__type_support_c.cpp.o[0m
+[42.576s] [ 74%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/srv/set_coords__type_support.cpp.o[0m
+[43.459s] [ 75%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/srv/detail/dds_fastrtps/set_coords__type_support.cpp.o[0m
+[43.731s] [ 75%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/srv/detail/get_coords__type_support_c.cpp.o[0m
+[44.006s] [ 76%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/srv/gripper_status__type_support.cpp.o[0m
+[45.067s] [ 77%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mecharm_interfaces/srv/pump_status__type_support.cpp.o[0m
+[45.292s] [ 77%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/srv/detail/dds_fastrtps/set_angles__type_support.cpp.o[0m
+[45.302s] [ 78%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/srv/detail/set_coords__type_support_c.cpp.o[0m
+[45.836s] [ 78%] [32m[1mLinking CXX shared library libmecharm_interfaces__rosidl_typesupport_cpp.so[0m
+[46.100s] [ 78%] Built target mecharm_interfaces__rosidl_typesupport_cpp
+[46.380s] [ 79%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/msg/detail/dds_fastrtps/mecharm_pump_status__type_support.cpp.o[0m
+[46.714s] [ 79%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/srv/detail/pump_status__type_support_c.cpp.o[0m
+[47.183s] [ 79%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/msg/detail/dds_fastrtps/mecharm_gripper_status__type_support.cpp.o[0m
+[47.587s] [ 80%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/srv/detail/gripper_status__type_support_c.cpp.o[0m
+[48.168s] [ 81%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/msg/detail/dds_fastrtps/mecharm_set_coords__type_support.cpp.o[0m
+[48.807s] [ 82%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/srv/detail/set_angles__type_support_c.cpp.o[0m
+[49.199s] [ 83%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/msg/detail/dds_fastrtps/mecharm_set_angles__type_support.cpp.o[0m
+[49.849s] [ 83%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mecharm_interfaces/msg/detail/mecharm_pump_status__type_support_c.cpp.o[0m
+[50.354s] [ 83%] [32mBuilding CXX object CMakeFiles/mecharm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mecharm_interfaces/msg/detail/dds_fastrtps/mecharm_coords__type_support.cpp.o[0m
+[50.520s] [ 84%] [32m[1mLinking CXX shared library libmecharm_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[50.632s] [ 84%] Built target mecharm_interfaces__rosidl_typesupport_fastrtps_c
+[51.002s] [ 85%] [32m[1mLinking CXX shared library libmecharm_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[51.124s] [ 85%] Built target mecharm_interfaces__rosidl_typesupport_fastrtps_cpp
+[51.143s] gmake[2]: *** No rule to make target '/home/laptop5/mycobot_ros2/mecharm/mecharm_interfaces/msg/MecharmAngles.msg', needed by 'CMakeFiles/mecharm_interfaces'. Stop.
+[51.143s] gmake[1]: *** [CMakeFiles/Makefile2:189: CMakeFiles/mecharm_interfaces.dir/all] Error 2
+[51.144s] gmake: *** [Makefile:146: all] Error 2
