@@ -469,7 +469,7 @@ ros2 topic echo /cmd_vel
 
 - [S Vishnuvardha Rajeshwaran](https://github.com/vishnurajeshwaran)
 
-Autonomous Robotics Project
+University of Manchester - Autonomous Robotics Project
 
 ---
 
