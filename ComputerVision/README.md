@@ -342,7 +342,11 @@ ros2 run tf2_tools view_frames
 
 # Contributors
 
+- [S Vishnuvardha Rajeshwaran](https://github.com/vishnurajeshwaran)
 
+University of Manchester - Autonomous Robotics Project
+
+---
 
 # License
 
