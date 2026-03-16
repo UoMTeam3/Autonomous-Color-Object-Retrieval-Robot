@@ -341,7 +341,9 @@ ros2 run tf2_tools view_frames
 ---
 
 # Contributors
-
+- [Si Qin](https://github.com/god-good-debug)
+- [Zicheng Hao](https://github.com/maxclementine21-boop)
+- [Po Cheng Chen](https://github.com/cpcinUoM)
 - [S Vishnuvardha Rajeshwaran](https://github.com/vishnurajeshwaran)
 
 University of Manchester - Autonomous Robotics Project
