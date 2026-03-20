@@ -1,3 +1,0 @@
-gmake[2]: *** No rule to make target '/home/laptop5/mycobot_ros2/mypalletizer_260/mypalletizer_interfaces/msg/MypalAngles.msg', needed by 'CMakeFiles/mypalletizer_interfaces'. Stop.
-gmake[1]: *** [CMakeFiles/Makefile2:189: CMakeFiles/mypalletizer_interfaces.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
