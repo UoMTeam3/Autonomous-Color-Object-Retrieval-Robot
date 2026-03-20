@@ -16,12 +16,12 @@ class Nav2NavigateToPoseActionClient(Node):
 
         self.action_client = ActionClient(self, NavigateToPose, '/navigate_to_pose')
 
-        self.send_goal_future = None
-        self.get_result_future = None
-
-        # goal management
         self.goal_in_progress = False
-        self.pending_goal = None
+
+        # Queue + tracking
+        self.goal_queue = []
+        self.visited_classes = set()
+        self.current_goal_class = None
 
         # subscribe to block coordinates in map frame
         self.block_sub = self.create_subscription(
@@ -38,21 +38,41 @@ class Nav2NavigateToPoseActionClient(Node):
 
         for obj in msg.yolo_interface:
 
-            x = obj.x - 0.2 # 20 cm offset 
+            class_name = obj.class_name
+
+            # Skip if already visited
+            if class_name in self.visited_classes:
+                continue
+
+            x = obj.x - 0.3 # 30 cm offset 
             y = obj.y
 
-            if self.goal_in_progress:
-                self.get_logger().info("Goal running. Storing new goal.")
-                self.pending_goal = (x, y)
-                return
+            #  Add to queue if not already queued
+            if not any(g[2] == class_name for g in self.goal_queue):
+                self.goal_queue.append((x, y, class_name))
+                self.get_logger().info(f"Queued goal for {class_name}")
 
-            pose = Pose()
-            pose.position.x = x
-            pose.position.y = y
-            pose.orientation.w = 1.0
+        #  Try to process queue
+        self.process_next_goal()
 
-            self.send_goal_async(pose, "")
+    def process_next_goal(self):
+
+        if self.goal_in_progress:
             return
+
+        if len(self.goal_queue) == 0:
+            return
+
+        x, y, class_name = self.goal_queue.pop(0)
+
+        pose = Pose()
+        pose.position.x = x
+        pose.position.y = y
+        pose.orientation.w = 1.0
+
+        self.current_goal_class = class_name
+
+        self.send_goal_async(pose, "")
 
     def send_goal_async(self, desired_pose: Pose, behaviour_tree: str) -> None:
 
@@ -66,7 +86,8 @@ class Nav2NavigateToPoseActionClient(Node):
             self.get_logger().info('Waiting for Nav2 action server...')
 
         self.get_logger().info(
-            f'Sending goal x:{desired_pose.position.x:.2f}, y:{desired_pose.position.y:.2f}'
+            f"Sending goal ({self.current_goal_class}) "
+            f"x:{desired_pose.position.x:.2f}, y:{desired_pose.position.y:.2f}"
         )
 
         self.goal_in_progress = True
@@ -94,26 +115,20 @@ class Nav2NavigateToPoseActionClient(Node):
 
     def action_result_callback(self, future: Future) -> None:
 
-        result: NavigateToPose.Result = future.result()
-
         self.get_logger().info('Navigation finished')
 
         self.goal_in_progress = False
 
-        # send stored goal if available
-        if self.pending_goal is not None:
+        # Mark class as completed
+        if self.current_goal_class:
+            self.visited_classes.add(self.current_goal_class)
+            self.get_logger().info(f"Completed {self.current_goal_class}")
 
-            x, y = self.pending_goal
-            self.pending_goal = None
+        self.current_goal_class = None
 
-            self.get_logger().info("Sending stored goal")
+        # Process next goal
 
-            pose = Pose()
-            pose.position.x = x
-            pose.position.y = y
-            pose.orientation.w = 1.0
-
-            self.send_goal_async(pose, "")
+        self.process_next_goal()
 
     def action_feedback_callback(self, feedback_msg: NavigateToPose.Feedback) -> None:
 
@@ -122,7 +137,6 @@ class Nav2NavigateToPoseActionClient(Node):
         self.get_logger().info(
             f'Distance remaining: {feedback.distance_remaining:.2f}'
         )
-
 
 def main(args=None):
 
