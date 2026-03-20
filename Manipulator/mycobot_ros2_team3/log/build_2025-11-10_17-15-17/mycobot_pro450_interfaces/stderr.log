@@ -1,3 +1,0 @@
-gmake[2]: *** No rule to make target '/home/laptop5/mycobot_ros2/mycobot_pro/mycobot_pro450_interfaces/msg/MycobotAngles.msg', needed by 'CMakeFiles/mycobot_pro450_interfaces'. Stop.
-gmake[1]: *** [CMakeFiles/Makefile2:189: CMakeFiles/mycobot_pro450_interfaces.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
