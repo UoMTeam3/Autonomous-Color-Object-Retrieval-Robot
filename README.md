@@ -81,6 +81,7 @@ cd Autonomous-Color-Object-Retrieval-Robot
 ---
 
 # Contributors
+- [Benjamin Woodruff](https://github.com/Ben-Woodruff)
 - [Si Qin](https://github.com/god-good-debug)
 - [Zicheng Hao](https://github.com/maxclementine21-boop)
 - [Po Cheng Chen](https://github.com/cpcinUoM)
