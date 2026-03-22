@@ -69,23 +69,7 @@ Navigation/
 
 ---
 
-## ⚙️ Technologies Used
-
-### Software
-- Python  
-- ROS2  
-- YOLOV8 
-- Nav2  
-- slam 
-### Hardware
-- Leo Rover  
-- RPLiDAR  
-- RGB Camera 
-- MyCobot 280 Robotic Arm  
-
----
-
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 - Ubuntu 20.04 / 22.04  
