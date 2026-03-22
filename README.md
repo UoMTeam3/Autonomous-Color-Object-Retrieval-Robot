@@ -1,4 +1,4 @@
-#  Autonomous Color Object Retrieval Robot (Leo Rover)
+#  Autonomous Color Object Retrieval Robot 
 
 ## Overview
 This repository contains the implementation of an **Autonomous Color Object Retrieval System** built on the **Leo Rover platform**. The robot is designed to autonomously detect, navigate to, pick up, and sort objects based on their color.
@@ -33,6 +33,19 @@ ComputerVision/
 │
 └── README.md
 ```
+```
+Manipulator/
+|    MyCobot_ros2_team3/
+|    │
+|    ├── mycobot_280/
+|    |      mycobot_280pi/
+|    |          mycobot_280pi/ (They are named the same thing)
+|    │
+|    └── README.md
+│
+└── README.md
+```
+
 
 ---
 
