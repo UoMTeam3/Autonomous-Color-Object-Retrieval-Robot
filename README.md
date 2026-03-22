@@ -34,6 +34,14 @@ ComputerVision/
 └── README.md
 ```
 ```
+Design/
+│
+├── Design Files
+│
+└── README.md
+```
+
+```
 Manipulator/
 |    MyCobot_ros2_team3/
 |    │
@@ -45,7 +53,19 @@ Manipulator/
 │
 └── README.md
 ```
-
+```
+Navigation/
+│
+├── rplidar_ros/
+│
+├── mapping_bringup/
+│
+├── leo_navigation_tutorial/
+│
+├── nav2_wavefront_frontier_exploration/
+│
+└── README.md
+```
 
 ---
 
