@@ -22,9 +22,17 @@ The main goals of this project are to:
 
 ---
 
----
-
 ##  Repository Structure
+
+```
+ComputerVision/
+│
+├── object_detection/
+│
+├── object_detection_interface/
+│
+└── README.md
+```
 
 ---
 
