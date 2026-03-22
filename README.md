@@ -75,8 +75,23 @@ The main goals of this project are to:
 - Python 3  
 
 ### Clone Repository
-```bash
 git clone https://github.com/UoMTeam3/Autonomous-Color-Object-Retrieval-Robot.git
 cd Autonomous-Color-Object-Retrieval-Robot
+
+---
+
+# Contributors
+- [Si Qin](https://github.com/god-good-debug)
+- [Zicheng Hao](https://github.com/maxclementine21-boop)
+- [Po Cheng Chen](https://github.com/cpcinUoM)
+- [S Vishnuvardha Rajeshwaran](https://github.com/vishnurajeshwaran)
+
+University of Manchester - Autonomous Robotics Project
+
+---
+
+# License
+
+Refer to the individual package licenses within the repository.
 
 
