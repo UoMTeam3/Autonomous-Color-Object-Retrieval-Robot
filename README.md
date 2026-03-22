@@ -25,30 +25,7 @@ The main goals of this project are to:
 ---
 
 ##  Repository Structure
-├── ComputerVision/
-│ ├── object_detection/
-│ ├── object_detection_interface/
-│ └── README.md
-│
-├── Navigation/
-│ ├── rplidar_ros/
-│ ├── mapping_bringup/
-│ ├── leo_navigation_tutorial/
-│ ├── nav2_wavefront_frontier_exploration/
-│ └── README.md
-│
-├── Manipulator/
-│ ├── MyCobot_ros2_team3/
-│ │ ├── mycobot_280/
-│ │ │ └── mycobot_280pi/
-│ │ │ └── mycobot_280pi/
-│ │ └── README.md
-│ └── README.md
-│
-├── Design/
-│ └── (CAD files and hardware designs)
-│
-└── README.md
+
 ---
 
 ## ⚙️ Technologies Used
