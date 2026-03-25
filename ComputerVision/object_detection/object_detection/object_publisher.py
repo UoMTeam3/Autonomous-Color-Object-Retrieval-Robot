@@ -25,7 +25,7 @@ class object_publisherNode(Node):
 
         self.model = YOLO(MODEL_PATH)
         self.get_logger().info("YOLOv8 model loaded")
-
+        self.target_locked = False 
         self.latest_yolo_msg = None
         
         self.fx = None
@@ -139,6 +139,12 @@ class object_publisherNode(Node):
                 Z = depth_m
                 X = (cx - self.cx) * Z / self.fx
                 Y = (cy - self.cy) * Z / self.fy
+                #fix the orange block problem
+                HEIGHT_THRESHOLD = 0.12 
+
+                if Y > HEIGHT_THRESHOLD:
+                    self.get_logger().info(f"ignore : Y={Y:.2f} too close to ground, not block")
+                    continue
 
                 obj = ObjectCoordinates()
                 obj.class_name = class_name
@@ -154,7 +160,7 @@ class object_publisherNode(Node):
                 )
 
         self.latest_yolo_msg = yolo_msg
-    
+        self.target_locked = True
     def publish_objects(self):
         if self.latest_yolo_msg is not None:
             self.object_publisher.publish(self.latest_yolo_msg)
