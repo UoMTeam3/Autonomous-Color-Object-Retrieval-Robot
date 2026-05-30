@@ -4,6 +4,14 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+    navigate_to_block_node = Node(
+        output='screen',
+        emulate_tty=True,
+        package='object_detection',
+        executable='navigate_to_block',
+        name='navigate_to_block_publisher'
+    )
+
     object_detection_node = Node(
         output='screen',
         emulate_tty=True,
@@ -31,6 +39,7 @@ def generate_launch_description():
         ]
     )
     return LaunchDescription([
+        navigate_to_block_node,
         object_detection_node,
         tf2_transform_node, 
         static_transform

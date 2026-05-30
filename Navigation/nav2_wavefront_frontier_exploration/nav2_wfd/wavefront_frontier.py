@@ -1,81 +1,41 @@
 #! /usr/bin/env python3
-# Copyright 2019 Samsung Research America
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
-import sys
+import math
 import time
-
-from action_msgs.msg import GoalStatus
-from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
-from nav2_msgs.action import FollowWaypoints
-from nav2_msgs.srv import ManageLifecycleNodes
-from nav2_msgs.srv import GetCostmap
-from nav2_msgs.msg import Costmap
-from nav_msgs.msg  import OccupancyGrid
-from nav_msgs.msg import Odometry
-from tf2_ros import Buffer, TransformListener
-from geometry_msgs.msg import Pose
-
-import rclpy
-from rclpy.action import ActionClient
-from rclpy.node import Node
-from rclpy.qos import QoSDurabilityPolicy, QoSHistoryPolicy, QoSReliabilityPolicy
-from rclpy.qos import QoSProfile
-
 from enum import Enum
 
 import numpy as np
+import rclpy
+from rclpy.action import ActionClient
+from rclpy.node import Node
+from rclpy.qos import QoSDurabilityPolicy, QoSHistoryPolicy, QoSReliabilityPolicy, QoSProfile
 
-import math
+from std_msgs.msg import Bool
+from action_msgs.msg import GoalStatus
+from geometry_msgs.msg import Pose, PoseStamped
+from nav2_msgs.action import FollowWaypoints
+from nav_msgs.msg import OccupancyGrid
+from tf2_ros import Buffer, TransformListener
+
 
 OCC_THRESHOLD = 10
 MIN_FRONTIER_SIZE = 5
 
-class Costmap2d():
-    class CostValues(Enum):
-        FreeSpace = 0
-        InscribedInflated = 253
-        LethalObstacle = 254
-        NoInformation = 255
-    
-    def __init__(self, map):
-        self.map = map
+BLACKLIST_RADIUS = 0.4          # meters
+GOAL_REACHED_RADIUS = 0.35      # meters
+PROGRESS_TIMEOUT = 20.0         # seconds
+MIN_PROGRESS_DELTA = 0.10       # meters
 
-    def getCost(self, mx, my):
-        return self.map.data[self.__getIndex(mx, my)]
 
-    def getSize(self):
-        return (self.map.metadata.size_x, self.map.metadata.size_y)
-
-    def getSizeX(self):
-        return self.map.metadata.size_x
-
-    def getSizeY(self):
-        return self.map.metadata.size_y
-
-    def __getIndex(self, mx, my):
-        return my * self.map.metadata.size_x + mx
-
-class OccupancyGrid2d():
+class OccupancyGrid2d:
     class CostValues(Enum):
         FreeSpace = 0
         InscribedInflated = 100
         LethalObstacle = 100
         NoInformation = -1
 
-    def __init__(self, map):
-        self.map = map
+    def __init__(self, map_msg):
+        self.map = map_msg
 
     def getCost(self, mx, my):
         return self.map.data[self.__getIndex(mx, my)]
@@ -92,149 +52,83 @@ class OccupancyGrid2d():
     def mapToWorld(self, mx, my):
         wx = self.map.info.origin.position.x + (mx + 0.5) * self.map.info.resolution
         wy = self.map.info.origin.position.y + (my + 0.5) * self.map.info.resolution
-
         return (wx, wy)
 
     def worldToMap(self, wx, wy):
-        if (wx < self.map.info.origin.position.x or wy < self.map.info.origin.position.y):
+        if wx < self.map.info.origin.position.x or wy < self.map.info.origin.position.y:
             raise Exception("World coordinates out of bounds")
 
         mx = int((wx - self.map.info.origin.position.x) / self.map.info.resolution)
         my = int((wy - self.map.info.origin.position.y) / self.map.info.resolution)
-        
-        if  (my >= self.map.info.height or mx > self.map.info.width):
-            raise Exception("Out of bounds")
+
+        if my >= self.map.info.height or mx >= self.map.info.width:
+            raise Exception("World coordinates out of bounds")
 
         return (mx, my)
 
     def __getIndex(self, mx, my):
         return my * self.map.info.width + mx
 
-class FrontierCache():
-    cache = {}
 
-    def getPoint(self, x, y):
-        idx = self.__cantorHash(x, y)
-
-        if idx in self.cache:
-            return self.cache[idx]
-
-        self.cache[idx] = FrontierPoint(x, y)
-        return self.cache[idx]
-
-    def __cantorHash(self, x, y):
-        return (((x + y) * (x + y + 1)) / 2) + y
-
-    def clear(self):
-        self.cache = {}
-
-class FrontierPoint():
+class FrontierPoint:
     def __init__(self, x, y):
         self.classification = 0
         self.mapX = x
         self.mapY = y
+
+
+class FrontierCache:
+    def __init__(self):
+        self.cache = {}
+
+    def getPoint(self, x, y):
+        idx = self.__cantorHash(x, y)
+        if idx not in self.cache:
+            self.cache[idx] = FrontierPoint(x, y)
+        return self.cache[idx]
+
+    def __cantorHash(self, x, y):
+        s = x + y
+        return (s * (s + 1)) // 2 + y
+
+    def clear(self):
+        self.cache.clear()
+
+
+class PointClassification(Enum):
+    MapOpen = 1
+    MapClosed = 2
+    FrontierOpen = 4
+    FrontierClosed = 8
+
 
 def centroid(arr):
     arr = np.array(arr)
     length = arr.shape[0]
     sum_x = np.sum(arr[:, 0])
     sum_y = np.sum(arr[:, 1])
-    return sum_x/length, sum_y/length
+    return sum_x / length, sum_y / length
 
-def findFree(mx, my, costmap):
-    fCache = FrontierCache()
-
-    bfs = [fCache.getPoint(mx, my)]
-
-    while len(bfs) > 0:
-        loc = bfs.pop(0)
-
-        if costmap.getCost(loc.mapX, loc.mapY) == OccupancyGrid2d.CostValues.FreeSpace.value:
-            return (loc.mapX, loc.mapY)
-
-        for n in getNeighbors(loc, costmap, fCache):
-            if n.classification & PointClassification.MapClosed.value == 0:
-                n.classification = n.classification | PointClassification.MapClosed.value
-                bfs.append(n)
-
-    return (mx, my)
-
-def getFrontier(pose, costmap, logger):
-    fCache = FrontierCache()
-
-    fCache.clear()
-
-    mx, my = costmap.worldToMap(pose.position.x, pose.position.y)
-
-    freePoint = findFree(mx, my, costmap)
-    start = fCache.getPoint(freePoint[0], freePoint[1])
-    start.classification = PointClassification.MapOpen.value
-    mapPointQueue = [start]
-
-    frontiers = []
-
-    while len(mapPointQueue) > 0:
-        p = mapPointQueue.pop(0)
-
-        if p.classification & PointClassification.MapClosed.value != 0:
-            continue
-
-        if isFrontierPoint(p, costmap, fCache):
-            p.classification = p.classification | PointClassification.FrontierOpen.value
-            frontierQueue = [p]
-            newFrontier = []
-
-            while len(frontierQueue) > 0:
-                q = frontierQueue.pop(0)
-
-                if q.classification & (PointClassification.MapClosed.value | PointClassification.FrontierClosed.value) != 0:
-                    continue
-
-                if isFrontierPoint(q, costmap, fCache):
-                    newFrontier.append(q)
-
-                    for w in getNeighbors(q, costmap, fCache):
-                        if w.classification & (PointClassification.FrontierOpen.value | PointClassification.FrontierClosed.value | PointClassification.MapClosed.value) == 0:
-                            w.classification = w.classification | PointClassification.FrontierOpen.value
-                            frontierQueue.append(w)
-
-                q.classification = q.classification | PointClassification.FrontierClosed.value
-
-            
-            newFrontierCords = []
-            for x in newFrontier:
-                x.classification = x.classification | PointClassification.MapClosed.value
-                newFrontierCords.append(costmap.mapToWorld(x.mapX, x.mapY))
-
-            if len(newFrontier) > MIN_FRONTIER_SIZE:
-                frontiers.append(centroid(newFrontierCords))
-
-        for v in getNeighbors(p, costmap, fCache):
-            if v.classification & (PointClassification.MapOpen.value | PointClassification.MapClosed.value) == 0:
-                if any(costmap.getCost(x.mapX, x.mapY) == OccupancyGrid2d.CostValues.FreeSpace.value for x in getNeighbors(v, costmap, fCache)):
-                    v.classification = v.classification | PointClassification.MapOpen.value
-                    mapPointQueue.append(v)
-
-        p.classification = p.classification | PointClassification.MapClosed.value
-
-    return frontiers
-        
 
 def getNeighbors(point, costmap, fCache):
     neighbors = []
 
     for x in range(point.mapX - 1, point.mapX + 2):
         for y in range(point.mapY - 1, point.mapY + 2):
-            if (x > 0 and x < costmap.getSizeX() and y > 0 and y < costmap.getSizeY()):
+            if 0 <= x < costmap.getSizeX() and 0 <= y < costmap.getSizeY():
+                if x == point.mapX and y == point.mapY:
+                    continue
                 neighbors.append(fCache.getPoint(x, y))
 
     return neighbors
+
 
 def isFrontierPoint(point, costmap, fCache):
     if costmap.getCost(point.mapX, point.mapY) != OccupancyGrid2d.CostValues.NoInformation.value:
         return False
 
     hasFree = False
+
     for n in getNeighbors(point, costmap, fCache):
         cost = costmap.getCost(n.mapX, n.mapY)
 
@@ -246,53 +140,174 @@ def isFrontierPoint(point, costmap, fCache):
 
     return hasFree
 
-class PointClassification(Enum):
-    MapOpen = 1
-    MapClosed = 2
-    FrontierOpen = 4
-    FrontierClosed = 8
+
+def findFree(mx, my, costmap):
+    fCache = FrontierCache()
+    start = fCache.getPoint(mx, my)
+    start.classification |= PointClassification.MapClosed.value
+
+    bfs = [start]
+
+    while bfs:
+        loc = bfs.pop(0)
+
+        if costmap.getCost(loc.mapX, loc.mapY) == OccupancyGrid2d.CostValues.FreeSpace.value:
+            return (loc.mapX, loc.mapY)
+
+        for n in getNeighbors(loc, costmap, fCache):
+            if (n.classification & PointClassification.MapClosed.value) == 0:
+                n.classification |= PointClassification.MapClosed.value
+                bfs.append(n)
+
+    return (mx, my)
+
+
+def getFrontier(pose, costmap):
+    fCache = FrontierCache()
+    fCache.clear()
+
+    mx, my = costmap.worldToMap(pose.position.x, pose.position.y)
+    freePoint = findFree(mx, my, costmap)
+
+    start = fCache.getPoint(freePoint[0], freePoint[1])
+    start.classification = PointClassification.MapOpen.value
+
+    mapPointQueue = [start]
+    frontiers = []
+
+    while mapPointQueue:
+        p = mapPointQueue.pop(0)
+
+        if p.classification & PointClassification.MapClosed.value:
+            continue
+
+        if isFrontierPoint(p, costmap, fCache):
+            p.classification |= PointClassification.FrontierOpen.value
+            frontierQueue = [p]
+            newFrontier = []
+
+            while frontierQueue:
+                q = frontierQueue.pop(0)
+
+                if q.classification & (PointClassification.MapClosed.value | PointClassification.FrontierClosed.value):
+                    continue
+
+                if isFrontierPoint(q, costmap, fCache):
+                    newFrontier.append(q)
+
+                    for w in getNeighbors(q, costmap, fCache):
+                        if (w.classification & (
+                            PointClassification.FrontierOpen.value |
+                            PointClassification.FrontierClosed.value |
+                            PointClassification.MapClosed.value
+                        )) == 0:
+                            w.classification |= PointClassification.FrontierOpen.value
+                            frontierQueue.append(w)
+
+                q.classification |= PointClassification.FrontierClosed.value
+
+            newFrontierCoords = []
+            for x in newFrontier:
+                x.classification |= PointClassification.MapClosed.value
+                newFrontierCoords.append(costmap.mapToWorld(x.mapX, x.mapY))
+
+            if len(newFrontier) > MIN_FRONTIER_SIZE:
+                frontiers.append(centroid(newFrontierCoords))
+
+        for v in getNeighbors(p, costmap, fCache):
+            if (v.classification & (PointClassification.MapOpen.value | PointClassification.MapClosed.value)) == 0:
+                if any(
+                    costmap.getCost(x.mapX, x.mapY) == OccupancyGrid2d.CostValues.FreeSpace.value
+                    for x in getNeighbors(v, costmap, fCache)
+                ):
+                    v.classification |= PointClassification.MapOpen.value
+                    mapPointQueue.append(v)
+
+        p.classification |= PointClassification.MapClosed.value
+
+    return frontiers
+
 
 class WaypointFollowerTest(Node):
-
     def __init__(self):
-        super().__init__(node_name='nav2_waypoint_tester', namespace='')
+        super().__init__('nav2_waypoint_tester')
+
+        self.exploration_done_pub = self.create_publisher(
+            Bool, 
+            '/exploration_done', 
+            1)
+
+        self.explore_enabled = True   # default ON
+
+        self.create_subscription(
+            Bool,
+            '/explore_enable',
+            self.explore_enable_callback,
+            1
+        )
+
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-        self.timer = self.create_timer(0.5, self.update_pose)
-        self.waypoints = None
-        self.readyToMove = True
-        self.currentPose = None
-        self.lastWaypoint = None
-        self.action_client = ActionClient(self, FollowWaypoints, '/follow_waypoints')
-        # self.initial_pose_pub = self.create_publisher(PoseWithCovarianceStamped,
-        #                                               'initialpose', 10)
 
-        self.costmapClient = self.create_client(GetCostmap, '/global_costmap/get_costmap')
-        while not self.costmapClient.wait_for_service(timeout_sec=1.0):
-            self.info_msg('service not available, waiting again...')
-        self.initial_pose_received = False
-        self.goal_handle = None
+        self.action_client = ActionClient(self, FollowWaypoints, '/follow_waypoints')
 
         pose_qos = QoSProfile(
-          durability=QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL,
-          reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_RELIABLE,
-          history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
-          depth=1)
+            durability=QoSDurabilityPolicy.RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL,
+            reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_RELIABLE,
+            history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+            depth=1
+        )
 
-        # self.model_pose_sub = self.create_subscription(Odometry,
-        #                                                '/odom', self.poseCallback, pose_qos)
+        self.costmapSub = self.create_subscription(
+            OccupancyGrid,
+            '/map',
+            self.occupancyGridCallback,
+            pose_qos
+        )
 
-        # self.costmapSub = self.create_subscription(Costmap(), '/global_costmap/costmap_raw', self.costmapCallback, pose_qos)
-        self.costmapSub = self.create_subscription(OccupancyGrid(), '/map', self.occupancyGridCallback, pose_qos)
+        self.pose_timer = self.create_timer(0.5, self.update_pose)
+        self.explore_timer = self.create_timer(1.0, self.exploration_loop)
+        self.progress_timer = self.create_timer(1.0, self.check_progress)
+
+        self.currentPose = None
         self.costmap = None
+        self.initial_pose_received = False
 
-        self.get_logger().info('Running Waypoint Test')
+        self.waypoints = []
+        self.goal_handle = None
+        self.processing_goal = False
+        self.exploration_done = False
+
+        self.blacklist = []
+        self.current_goal_target = None
+        self.goal_start_time = None
+        self.goal_start_distance = None
+        self.best_distance_so_far = None
+
+        self.get_logger().info('Running frontier exploration')
+
+    def explore_enable_callback(self, msg):
+
+        prev_state = self.explore_enabled
+        self.explore_enabled = msg.data
+
+        if not self.explore_enabled:
+            self.warn_msg("Exploration DISABLED → stopping robot")
+
+            # Cancel any active goal immediately
+            self.cancel_current_goal()
+
+        elif not prev_state and self.explore_enabled:
+            self.info_msg("Exploration ENABLED → resuming")
+
+    def occupancyGridCallback(self, msg):
+        self.costmap = OccupancyGrid2d(msg)
 
     def update_pose(self):
         try:
             trans = self.tf_buffer.lookup_transform(
-                'map',          # target frame
-                'base_link',    # robot frame
+                'map',
+                'base_link',
                 rclpy.time.Time()
             )
 
@@ -308,213 +323,197 @@ class WaypointFollowerTest(Node):
         except Exception:
             self.get_logger().warn("Waiting for TF map -> base_link")
 
-    def occupancyGridCallback(self, msg):
-        self.costmap = OccupancyGrid2d(msg)
-
-    def moveToFrontiers(self):
-        if self.currentPose is None or self.costmap is None:
-            self.info_msg("Waiting for pose or map...")
-            return
-        
-        frontiers = getFrontier(self.currentPose, self.costmap, self.get_logger())
-
-        if len(frontiers) == 0:
-            self.info_msg('No More Frontiers')
-            return
-
-        location = None
-        closest_frontier = min(
-            frontiers,
-            key=lambda f: math.sqrt(
-                (f[0] - self.currentPose.position.x) ** 2 +
-                (f[1] - self.currentPose.position.y) ** 2
-            )
+    def distance_to(self, point_xy):
+        if self.currentPose is None:
+            return float('inf')
+        return math.hypot(
+            point_xy[0] - self.currentPose.position.x,
+            point_xy[1] - self.currentPose.position.y
         )
 
-        location = [closest_frontier]
-        # largestDist = 0
-        # for f in frontiers:
-        #     dist = math.sqrt(((f[0] - self.currentPose.position.x)**2) + ((f[1] - self.currentPose.position.y)**2))
-        #     if  dist > largestDist:
-        #         largestDist = dist
-        #         location = [f] 
+    def is_blacklisted(self, frontier):
+        for bx, by in self.blacklist:
+            if math.hypot(frontier[0] - bx, frontier[1] - by) < BLACKLIST_RADIUS:
+                return True
+        return False
 
-        #worldFrontiers = [self.costmap.mapToWorld(f[0], f[1]) for f in frontiers]
-        self.info_msg(f'World points {location}')
-        self.setWaypoints(location)
-
-        action_request = FollowWaypoints.Goal()
-        action_request.poses = self.waypoints
-
-        self.info_msg('Sending goal request...')
-        while not self.action_client.wait_for_server(timeout_sec=1.0):
-            self.info_msg("Waiting for /follow_waypoints action server...")
-        send_goal_future = self.action_client.send_goal_async(action_request)
-        try:
-            rclpy.spin_until_future_complete(self, send_goal_future)
-            self.goal_handle = send_goal_future.result()
-        except Exception as e:
-            self.error_msg('Service call failed %r' % (e,))
-
-        if not self.goal_handle.accepted:
-            self.error_msg('Goal rejected')
-            return
-
-        self.info_msg('Goal accepted')
-
-        get_result_future = self.goal_handle.get_result_async()
-
-        self.info_msg("Waiting for 'FollowWaypoints' action to complete")
-        try:
-            rclpy.spin_until_future_complete(self, get_result_future)
-            status = get_result_future.result().status
-            result = get_result_future.result().result
-        except Exception as e:
-            self.error_msg('Service call failed %r' % (e,))
-
-        #self.currentPose = self.waypoints[len(self.waypoints) - 1].pose
-        if status != 4:
-            self.error_msg(f"Goal failed with status {status}")
-            return
-
-        self.info_msg("Searching for next frontier...")
-        self.moveToFrontiers()
-        return
-
-    def costmapCallback(self, msg):
-        self.costmap = Costmap2d(msg)
-
-        unknowns = 0
-        for x in range(0, self.costmap.getSizeX()):
-            for y in range(0, self.costmap.getSizeY()):
-                if self.costmap.getCost(x, y) == 255:
-                    unknowns = unknowns + 1
-        self.get_logger().info(f'Unknowns {unknowns}')
-        self.get_logger().info(f'Got Costmap {len(getFrontier(None, self.costmap, self.get_logger()))}')
-
-    def dumpCostmap(self):
-        costmapReq = GetCostmap.Request()
-        self.get_logger().info('Requesting Costmap')
-        costmap = self.costmapClient.call(costmapReq)
-        self.get_logger().info(f'costmap resolution {costmap.specs.resolution}')
-
-    # def setInitialPose(self, pose):
-    #     self.init_pose = PoseWithCovarianceStamped()
-    #     self.init_pose.pose.pose.position.x = pose[0]
-    #     self.init_pose.pose.pose.position.y = pose[1]
-    #     self.init_pose.header.frame_id = 'map'
-    #     self.currentPose = self.init_pose.pose.pose
-    #     self.publishInitialPose()
-    #     time.sleep(5)
-
-    # def poseCallback(self, msg):
-    #     self.info_msg('Received amcl_pose')
-    #     self.currentPose = msg.pose.pose
-    #     self.initial_pose_received = True
-        
+    def blacklist_current_goal(self, reason="unknown"):
+        if self.current_goal_target is not None:
+            self.blacklist.append(self.current_goal_target)
+            self.warn_msg(f"Blacklisting frontier {self.current_goal_target} ({reason})")
 
     def setWaypoints(self, waypoints):
         self.waypoints = []
         for wp in waypoints:
             msg = PoseStamped()
             msg.header.frame_id = 'map'
+            msg.header.stamp = self.get_clock().now().to_msg()
             msg.pose.position.x = wp[0]
             msg.pose.position.y = wp[1]
             msg.pose.orientation.w = 1.0
             self.waypoints.append(msg)
 
-    def run(self, block):
-        if not self.waypoints:
-            rclpy.error_msg('Did not set valid waypoints before running test!')
-            return False
+    def exploration_loop(self):
 
-        while not self.action_client.wait_for_server(timeout_sec=1.0):
-            self.info_msg("'FollowWaypoints' action server not available, waiting...")
+        if not self.explore_enabled:
+            return
+
+        if self.exploration_done or self.processing_goal:
+            return
+
+        if self.currentPose is None or self.costmap is None:
+            self.info_msg("Waiting for pose or map...")
+            return
+
+        try:
+            frontiers = getFrontier(self.currentPose, self.costmap)
+        except Exception as e:
+            self.warn_msg(f"Frontier extraction failed: {e}")
+            return
+
+        if not frontiers:
+            self.info_msg("No more frontiers. Exploration complete.")
+            self.exploration_done = True
+            self.exploration_done_pub.publish(Bool(data=True))
+            return
+
+        valid_frontiers = [f for f in frontiers if not self.is_blacklisted(f)]
+
+        if not valid_frontiers:
+            self.warn_msg("All detected frontiers are blacklisted. Exploration complete.")
+            self.exploration_done = True
+            self.exploration_done_pub.publish(Bool(data=True))
+            return
+
+        closest_frontier = min(valid_frontiers, key=self.distance_to)
+
+        if self.distance_to(closest_frontier) < GOAL_REACHED_RADIUS:
+            self.blacklist.append(closest_frontier)
+            self.warn_msg(f"Skipping too-close frontier {closest_frontier}")
+            return
+
+        self.send_goal_to_frontier(closest_frontier)
+
+    def send_goal_to_frontier(self, frontier):
+
+        if not self.explore_enabled:
+            return
+        self.setWaypoints([frontier])
 
         action_request = FollowWaypoints.Goal()
         action_request.poses = self.waypoints
 
-        self.info_msg('Sending goal request...')
+        self.info_msg(f"Sending frontier goal: {frontier}")
+
+        while not self.action_client.wait_for_server(timeout_sec=1.0):
+            self.info_msg("Waiting for /follow_waypoints action server...")
+
+        self.processing_goal = True
+        self.current_goal_target = frontier
+        self.goal_start_time = time.time()
+
+        current_dist = self.distance_to(frontier)
+        self.goal_start_distance = current_dist
+        self.best_distance_so_far = current_dist
+
         send_goal_future = self.action_client.send_goal_async(action_request)
+        send_goal_future.add_done_callback(self.goal_response_callback)
+
+    def goal_response_callback(self, future):
         try:
-            rclpy.spin_until_future_complete(self, send_goal_future)
-            self.goal_handle = send_goal_future.result()
+            self.goal_handle = future.result()
         except Exception as e:
-            self.error_msg('Service call failed %r' % (e,))
+            self.error_msg(f"Goal service call failed: {e}")
+            self.blacklist_current_goal("service failure")
+            self.reset_goal_state()
+            return
 
         if not self.goal_handle.accepted:
-            self.error_msg('Goal rejected')
-            return False
+            self.error_msg("Goal rejected")
+            self.blacklist_current_goal("goal rejected")
+            self.reset_goal_state()
+            return
 
-        self.info_msg('Goal accepted')
-        if not block:
-            return True
-
+        self.info_msg("Goal accepted")
         get_result_future = self.goal_handle.get_result_async()
+        get_result_future.add_done_callback(self.result_callback)
 
-        self.info_msg("Waiting for 'FollowWaypoints' action to complete")
+    def result_callback(self, future):
         try:
-            rclpy.spin_until_future_complete(self, get_result_future)
-            status = get_result_future.result().status
-            result = get_result_future.result().result
+            result = future.result()
+            status = result.status
+
+            if status == GoalStatus.STATUS_SUCCEEDED:
+                self.info_msg("Goal succeeded")
+            else:
+                self.warn_msg(f"Goal failed with status {status}")
+                self.blacklist_current_goal(f"status {status}")
+
         except Exception as e:
-            self.error_msg('Service call failed %r' % (e,))
+            self.error_msg(f"Result callback failed: {e}")
+            self.blacklist_current_goal("result callback exception")
 
-        if status != GoalStatus.STATUS_SUCCEEDED:
-            self.info_msg('Goal failed with status code: {0}'.format(status))
-            return False
-        if len(result.missed_waypoints) > 0:
-            self.info_msg('Goal failed to process all waypoints,'
-                          ' missed {0} wps.'.format(len(result.missed_waypoints)))
-            return False
+        self.reset_goal_state()
 
-        self.info_msg('Goal succeeded!')
-        return True
+    def reset_goal_state(self):
+        self.processing_goal = False
+        self.goal_handle = None
+        self.current_goal_target = None
+        self.goal_start_time = None
+        self.goal_start_distance = None
+        self.best_distance_so_far = None
 
-    def publishInitialPose(self):
-        self.initial_pose_pub.publish(self.init_pose)
+    def check_progress(self):
 
-    def shutdown(self):
-        self.info_msg('Shutting down')
+        if not self.explore_enabled:
+            return
+        
+        if not self.processing_goal:
+            return
 
-        self.action_client.destroy()
-        self.info_msg('Destroyed FollowWaypoints action client')
+        if self.currentPose is None or self.current_goal_target is None:
+            return
 
-        transition_service = 'lifecycle_manager_navigation/manage_nodes'
-        mgr_client = self.create_client(ManageLifecycleNodes, transition_service)
-        while not mgr_client.wait_for_service(timeout_sec=1.0):
-            self.info_msg(transition_service + ' service not available, waiting...')
+        current_distance = self.distance_to(self.current_goal_target)
 
-        req = ManageLifecycleNodes.Request()
-        req.command = ManageLifecycleNodes.Request().SHUTDOWN
-        future = mgr_client.call_async(req)
+        if self.best_distance_so_far is None or current_distance < self.best_distance_so_far:
+            self.best_distance_so_far = current_distance
+
+        if current_distance < GOAL_REACHED_RADIUS:
+            self.info_msg("Robot is very close to current frontier goal")
+            return
+
+        elapsed = time.time() - self.goal_start_time if self.goal_start_time is not None else 0.0
+        progress = (self.goal_start_distance - self.best_distance_so_far) if self.goal_start_distance is not None else 0.0
+
+        if elapsed > PROGRESS_TIMEOUT and progress < MIN_PROGRESS_DELTA:
+            self.warn_msg(
+                f"No meaningful progress for {elapsed:.1f}s "
+                f"(progress: {progress:.2f} m). Cancelling goal."
+            )
+            self.blacklist_current_goal("progress timeout")
+            self.cancel_current_goal()
+
+    def cancel_current_goal(self):
+        if self.goal_handle is None:
+            self.reset_goal_state()
+            return
+
         try:
-            rclpy.spin_until_future_complete(self, future)
-            future.result()
+            cancel_future = self.goal_handle.cancel_goal_async()
+            cancel_future.add_done_callback(self.cancel_done_callback)
         except Exception as e:
-            self.error_msg('%s service call failed %r' % (transition_service, e,))
+            self.error_msg(f"Failed to cancel goal: {e}")
+            self.reset_goal_state()
 
-        self.info_msg('{} finished'.format(transition_service))
-
-        transition_service = 'lifecycle_manager_localization/manage_nodes'
-        mgr_client = self.create_client(ManageLifecycleNodes, transition_service)
-        while not mgr_client.wait_for_service(timeout_sec=1.0):
-            self.info_msg(transition_service + ' service not available, waiting...')
-
-        req = ManageLifecycleNodes.Request()
-        req.command = ManageLifecycleNodes.Request().SHUTDOWN
-        future = mgr_client.call_async(req)
+    def cancel_done_callback(self, future):
         try:
-            rclpy.spin_until_future_complete(self, future)
-            future.result()
+            _ = future.result()
+            self.warn_msg("Goal cancelled")
         except Exception as e:
-            self.error_msg('%s service call failed %r' % (transition_service, e,))
+            self.error_msg(f"Cancel callback failed: {e}")
 
-        self.info_msg('{} finished'.format(transition_service))
-
-    def cancel_goal(self):
-        cancel_future = self.goal_handle.cancel_goal_async()
-        rclpy.spin_until_future_complete(self, cancel_future)
+        self.reset_goal_state()
 
     def info_msg(self, msg: str):
         self.get_logger().info(msg)
@@ -526,69 +525,27 @@ class WaypointFollowerTest(Node):
         self.get_logger().error(msg)
 
 
-def main(argv=sys.argv[1:]):
-    rclpy.init()
+def main(args=None):
+    rclpy.init(args=args)
 
-    # wait a few seconds to make sure entire stacks are up
-    #time.sleep(10)
+    node = WaypointFollowerTest()
 
-    wps = [[-0.52, -0.54], [0.58, -0.55], [0.58, 0.52]]
-    starting_pose = [-2.0, -0.5]
+    try:
+        while not node.initial_pose_received:
+            node.info_msg("Waiting for TF pose...")
+            rclpy.spin_once(node, timeout_sec=1.0)
 
-    test = WaypointFollowerTest()
-    #test.dumpCostmap()
-    test.setWaypoints(wps)
+        while node.costmap is None:
+            node.info_msg("Waiting for initial map...")
+            rclpy.spin_once(node, timeout_sec=1.0)
 
-    retry_count = 0
-    retries = 2
-    # while not test.initial_pose_received and retry_count <= retries:
-    #     retry_count += 1
-    #     test.info_msg('Setting initial pose')
-    #     test.setInitialPose(starting_pose)
-    #     test.info_msg('Waiting for amcl_pose to be received')
-    #     rclpy.spin_once(test, timeout_sec=1.0)  # wait for poseCallback
+        rclpy.spin(node)
 
-    while not test.initial_pose_received:
-        test.info_msg("Waiting for TF pose...")
-        rclpy.spin_once(test, timeout_sec=1.0)
+    except KeyboardInterrupt:
+        pass
+    except Exception as e:
+        print(e)
 
-    while test.costmap == None:
-        test.info_msg('Getting initial map')
-        rclpy.spin_once(test, timeout_sec=1.0)
-
-    test.moveToFrontiers()
-
-    rclpy.spin(test)
-    # result = test.run(True)
-    # assert result
-
-    # # preempt with new point
-    # test.setWaypoints([starting_pose])
-    # result = test.run(False)
-    # time.sleep(2)
-    # test.setWaypoints([wps[1]])
-    # result = test.run(False)
-
-    # # cancel
-    # time.sleep(2)
-    # test.cancel_goal()
-
-    # # a failure case
-    # time.sleep(2)
-    # test.setWaypoints([[100.0, 100.0]])
-    # result = test.run(True)
-    # assert not result
-    # result = not result
-
-    # test.shutdown()
-    # test.info_msg('Done Shutting Down.')
-
-    # if not result:
-    #     test.info_msg('Exiting failed')
-    #     exit(1)
-    # else:
-    #     test.info_msg('Exiting passed')
-    #     exit(0)
 
 
 if __name__ == '__main__':

@@ -22,14 +22,14 @@ class TF2ListenerNode(Node):
         # Subscribe to detected object coordinates
         self.object_sub = self.create_subscription(
             YoloInterface,
-            '/block_coordinates',
+            '/bin_coordinates',
             self.object_callback,
             1
         )
 
         self.map_coordinate_publisher = self.create_publisher(
             msg_type=YoloInterface,
-            topic='/block_map_coordinates',
+            topic='/bin_map_coordinates',
             qos_profile=1)
         
         # Track already processed classes
@@ -51,7 +51,7 @@ class TF2ListenerNode(Node):
             # Create point in camera frame
             point_camera = PointStamped()
             point_camera.header.frame_id = "camera_color_optical_frame"
-            point_camera.header.stamp =  msg.header.stamp #rclpy.time.Time().to_msg()
+            point_camera.header.stamp = rclpy.time.Time().to_msg()
             point_camera.point.x = obj.x
             point_camera.point.y = obj.y
             point_camera.point.z = obj.z
@@ -70,7 +70,6 @@ class TF2ListenerNode(Node):
                     transform=tfs
                 )
 
-<<<<<<< HEAD
                 # Compute distance from robot (map origin approx)
                 dist = math.sqrt(
                     point_map.point.x**2 + point_map.point.y**2
@@ -83,46 +82,11 @@ class TF2ListenerNode(Node):
                     "z": point_map.point.z,
                     "distance": dist
                 })
-=======
-                map_msg = YoloInterface()
-                map_object = ObjectCoordinates()
-
-                map_object.class_name = obj.class_name
-                map_object.x = point_map.point.x
-                map_object.y = point_map.point.y
-                map_object.z = point_map.point.z
-
-                map_msg.yolo_interface.append(map_object)
-                self.map_coordinate_publisher.publish(map_msg)
-
-                self.sent_classes.add(obj.class_name)
-
-                self.get_logger().info(
-                    f"Sent goal for {obj.class_name} | "
-                    f"X={point_map.point.x:.2f}, Y={point_map.point.y:.2f}"
-                )
-
-                return  
-
-                # # Compute distance from robot (map origin approx)
-                # dist = math.sqrt(
-                #     point_map.point.x**2 + point_map.point.y**2
-                # )
-
-                # transformed_objects.append({
-                #     "class": obj.class_name,
-                #     "x": point_map.point.x,
-                #     "y": point_map.point.y,
-                #     "z": point_map.point.z,
-                #     "distance": dist
-                # })
->>>>>>> 57d890f (updated)
 
             except TransformException as e:
                 self.get_logger().warn(f"Transform failed: {e}")
 
             #  No new objects
-<<<<<<< HEAD
         if len(transformed_objects) == 0:
             return
 
@@ -150,35 +114,6 @@ class TF2ListenerNode(Node):
             f"Sent goal for {closest_obj['class']} | "
             f"X={closest_obj['x']:.2f}, Y={closest_obj['y']:.2f}"
         )
-=======
-        # if len(transformed_objects) == 0:
-        #     return
-
-        # #  Pick closest object ONLY
-        # closest_obj = min(transformed_objects, key=lambda x: x["distance"])
-
-        # # Create message for ONLY ONE object
-        # map_msg = YoloInterface()
-        # map_object = ObjectCoordinates()
-
-        # map_object.class_name = closest_obj["class"]
-        # map_object.x = closest_obj["x"]
-        # map_object.y = closest_obj["y"]
-        # map_object.z = closest_obj["z"]
-
-        # map_msg.yolo_interface.append(map_object)
-
-        # #  Publish ONCE
-        # self.map_coordinate_publisher.publish(map_msg)
-
-        # #  Mark class as sent
-        # self.sent_classes.add(closest_obj["class"])
-
-        # self.get_logger().info(
-        #     f"Sent goal for {closest_obj['class']} | "
-        #     f"X={closest_obj['x']:.2f}, Y={closest_obj['y']:.2f}"
-        # )
->>>>>>> 57d890f (updated)
 
 def main(args=None):
     """
